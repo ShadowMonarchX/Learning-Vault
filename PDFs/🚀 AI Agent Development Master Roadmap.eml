@@ -1,0 +1,2387 @@
+Delivered-To: jenishshekhada7@gmail.com
+Received: by 2002:a05:6a11:d512:b0:678:bbb6:c6f6 with SMTP id oe18csp653270pxc;
+        Wed, 12 Nov 2025 20:38:41 -0800 (PST)
+X-Received: by 2002:a17:903:15cc:b0:297:dd7f:f1e0 with SMTP id d9443c01a7336-2984edca85cmr62807725ad.43.1763008721231;
+        Wed, 12 Nov 2025 20:38:41 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1763008721; cv=none;
+        d=google.com; s=arc-20240605;
+        b=dScpeWmP71SZpxcFd3m9eHRLK5ihJrdp5h0eEtEr3GZ6k4iM93recjBM6mCh9HhRi8
+         OybgYx9Tcup8wSOBQcGG503UpGKRMrmmARNjbKvAJE8JWftmHHxAKhhRMBn/wWPw9uB8
+         FCNQsQUSWV3EVVzC5tIieee+Wm3M33VHmDfZ695o/JnqpAECJfqg8jllhoqoOZqwu6dO
+         NeT/k1M+HhHy85LD8uz670gAq+On3BZqWAA6sZeRt2xF90jo8TTz5Q0lClY2cJSQk4Pb
+         83RoXcdH49MjEIVh2CrFtaWDt0yohryLGGNZElk25cqDBXPYQ+0uFsCwIDk6EdrDnu1S
+         bmyg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:date:message-id:subject:mime-version:from:dkim-signature;
+        bh=Gmdi6Cr/zc6k5CsyEjh7CZFhtg5C7HnQbpRerzQ1TUQ=;
+        fh=OgUx4X0xvT43IYgfgvHRwHD9bSqx6cz8SiwuHaJ91GQ=;
+        b=dNndt6xcnZm/r+d58IPIovT6D0vRBjF8snoT88XtCLo8jUhHrhfCYM5rMBh3smCbaW
+         1g8tiInm5FwFj2yYBZANAtCb+QSihdLO5u2qisy42s8yZrUGZKMN20dnrdVplFq+svDf
+         voB20w05Li6IbalcVWtK9Qu+oiq7s/Bv8Ksz6+a2k4BsWf9bjpXziC0lCHAalttI9/Zy
+         6GVvQ1N1/WOqpYhJNSpJTmb4G9b+IBb17ag6zZeR+Od8FkNutJX5xSruEjK5bMzOPdiM
+         fQB2Dw73fZyDGDDyh7e/q7/g2/pJMwcmofALKpXuawGjPKXoaGWhXylvPCD4NFrNNHaU
+         MWwA==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=XlLGrgTg;
+       spf=pass (google.com: domain of jenexshekhada@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=jenexshekhada@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <jenexshekhada@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id d9443c01a7336-2985c29b4casor5295525ad.7.2025.11.12.20.38.41
+        for <jenishshekhada7@gmail.com>
+        (Google Transport Security);
+        Wed, 12 Nov 2025 20:38:41 -0800 (PST)
+Received-SPF: pass (google.com: domain of jenexshekhada@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=XlLGrgTg;
+       spf=pass (google.com: domain of jenexshekhada@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=jenexshekhada@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1763008720; x=1763613520; dara=google.com;
+        h=to:date:message-id:subject:mime-version:from:from:to:cc:subject
+         :date:message-id:reply-to;
+        bh=Gmdi6Cr/zc6k5CsyEjh7CZFhtg5C7HnQbpRerzQ1TUQ=;
+        b=XlLGrgTg3jUt1oSO0rcwZ668u53H2uKFlVgLHK3zdJH+e1cYmu0Edz9AP4EPZUxu8o
+         UiP8wa6NI9qx0KeFBskAmqK2ANg1a3CY2MLaysgytyAgSSpDsexg3btZMxDwreHnI6q5
+         +Bw6G6q5G9b1xl+n7Dxgcx2RivcFTyWDFzLPPV5csVF4lLSZ7JTD+VhbdmAF3AbGL3E+
+         GZU2jviKIjtYjMxv4YiVAE5q6KhdHYA1aYK+HqJew5+KFqb4IVj6l16MUhA3lZe5Xbq3
+         UfvPNslQXMKuhVuO2/YbVldAiDyEa/uF2+bhaqsnRslQ06uNDRp6uIQOpd+7cEI6q66W
+         x5sA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1763008720; x=1763613520;
+        h=to:date:message-id:subject:mime-version:from:x-gm-gg
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        bh=Gmdi6Cr/zc6k5CsyEjh7CZFhtg5C7HnQbpRerzQ1TUQ=;
+        b=pS5UL1btR7E/MMb8b78Z4oRdGbe+J8urqCQmaJoyNiBJygdExiVgiMhLQhtesVYO+P
+         8nn+Bj6W6VF27tbH60+wg07B8KcL0gcGMi55vPDNfGBv2eNlR8uzRAeeNwC6iWuVxm8W
+         Zdr04aukW5Zu8iYSd8NeMuVlIrw5nL0wZqfV43nvarNKTSZeUAyua8SfKfKr38ZYeTgU
+         9+HIiUSMJ5xEICb0Ic58fdgo4EKuQIVB2OzYXkxFyTtlKqZohnDpWVXmy4FZs4ZqGmZO
+         wKfuEX1y3ravaI/zOSkR2UOvUQ51xfmiXLXP3y89F9IdwX1s3fFAAClZVAkP2JEBgx2e
+         U4Dw==
+X-Gm-Message-State: AOJu0Yw1kohVeB2Z2a1ePVK4gn3Vb7hmHrC8OUnwSUBK7QYQeoi6+wAE
+	SW6mN7t1ne5ulW5MtHTpJQRTQ6lqLjCTUQ48PaKPLeG5nJZBAUfxJc94mHZWlw==
+X-Gm-Gg: ASbGncsgp3zG6cY7nrs5tEYbzJSdX7pG2eOq+sWywG1cTHLwQq3hGGLaFpDq8agp7oG
+	VQnbtQdezoQVczQSWMzSltgi+cII25Y0oeBATL/IhUe/I6ZLNmA+8gJ3QLfsycI3synkIeD6nAY
+	Cy9vw6u7UGihzIFnTBBT3dxZdwObaFi7EPRijdaKWZqTnBLUo6YbSeYZXNodKJ1OISl8iHefXwq
+	nJDY0AwnJ0xuUQ2X91+OMDEJleJGWAW0+ZALRlWThoe/86okUFnnSbhBvJ2fe0I8FOq1HKERQd2
+	4tTIyKljWoyxHFNYZQG9zscwy6GhLuxdxA2PH4HWO0Ea4EO6CCmpBX3w25VvweS/D27TSJfx1gK
+	2s5RGHwoWDuKbEVZGcu8bLlvyAqXaqtwUuyWITNxCpq0ipjE2YN/gLdTkiugmU95jLQkAfoMh7n
+	HlqLouTxfiq3R08J+6Tuinvt7Jj1iF4e/b0Q26bg==
+X-Google-Smtp-Source: AGHT+IExzalKbLtxxZHlwFw+Mf1C4DhYCiAIX/F9yaX3CzWSfV05tSNyu1CTC+58hlwdjaKbGuZdnw==
+X-Received: by 2002:a17:903:286:b0:295:fbc7:d282 with SMTP id d9443c01a7336-2984ed494aamr72390375ad.27.1763008719733;
+        Wed, 12 Nov 2025 20:38:39 -0800 (PST)
+Return-Path: <jenexshekhada@gmail.com>
+Received: from smtpclient.apple ([2409:4080:9192:f029:106a:ce1e:9114:42ac])
+        by smtp.gmail.com with ESMTPSA id d9443c01a7336-2985c249806sm8844335ad.44.2025.11.12.20.38.37
+        for <jenishshekhada7@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 12 Nov 2025 20:38:39 -0800 (PST)
+From: Jenex Shekhada <jenexshekhada@gmail.com>
+Content-Type: multipart/alternative;
+	boundary="Apple-Mail=_2CB6B795-EBCD-4001-9482-BC07A8DA3B2E"
+Mime-Version: 1.0 (Mac OS X Mail 16.0 \(3864.100.1.1.5\))
+Subject: =?utf-8?Q?=F0=9F=9A=80_AI_Agent_Development_Master_Roadmap?=
+Message-Id: <B8AB5B73-CA24-4B81-9B43-5BD3E660F9AA@gmail.com>
+Date: Thu, 13 Nov 2025 10:08:25 +0530
+To: jenishshekhada7@gmail.com
+X-Mailer: Apple Mail (2.3864.100.1.1.5)
+
+
+--Apple-Mail=_2CB6B795-EBCD-4001-9482-BC07A8DA3B2E
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain;
+	charset=utf-8
+
+=F0=9F=9A=80 AI Agent Development Master Roadmap
+Goal: Become a full-stack AI Agent Developer (LLM-powered systems, =
+autonomous workflows, monetization-ready).
+Total Duration: 14 Weeks (=E2=89=883.5 Months)
+Daily Time: 6=E2=80=937 Hours
+Weekly Format:
+=F0=9F=A7=A0 Theory & Reading =E2=80=93 1.5 hr/day
+=E2=9A=99=EF=B8=8F Tools & Tutorials =E2=80=93 1.5 hr/day
+=F0=9F=92=BB Coding Practice =E2=80=93 2 hr/day
+=F0=9F=A7=A9 Project Building =E2=80=93 2 hr/day
+
+=F0=9F=A7=A9 Phase 1 =E2=80=93 Foundations (Week 1=E2=80=932)
+Goal: Understand LLMs, Agents, Prompts, and Architecture.
+Day	Focus	Topics / Resources	Tools
+1=E2=80=933	AI Agent Basics	What is an LLM, difference between =
+chatbots & agents, reasoning patterns	YouTube (Two Minute Papers, =
+Lilian Weng), OpenAI docs
+4=E2=80=936	Prompt Engineering	ReAct, Chain-of-Thought, and =
+Zero/Few-Shot prompts	OpenAI Cookbook, DeepLearning.AI Prompting =
+Course
+7=E2=80=9310	LLM Architecture	Transformers, embeddings, =
+context window	Hugging Face =E2=80=9CTransformer Illustrated=E2=80=9D
+11=E2=80=9314	Tool Setup + Mini Project	Python, Jupyter, =
+LangChain, OpenAI API, GitHub setup	LangChain, VS Code
+=F0=9F=A7=A0 Reading:
+OpenAI Practical Guide to Building Agents =
+<https://platform.openai.com/docs/guides/agents>
+Lilian Weng =E2=80=93 LLM-Powered Autonomous Agents =
+<https://lilianweng.github.io/posts/2023-06-23-agent/?utm_source=3Dchatgpt=
+.com>
+Agent Design Patterns (Parts 1=E2=80=935)
+=F0=9F=92=BB Mini Project:
+=F0=9F=91=89 Build a ChatGPT-style personal assistant using LangChain + =
+OpenAI API.
+
+=E2=9A=99=EF=B8=8F Phase 2 =E2=80=93 Core Agent Development (Week 3=E2=80=93=
+4)
+Goal: Build RAG + Tool-Using Agents.
+Day	Focus	Topics / Tools	Project
+15=E2=80=9317	ReAct Agents	Thought/Action/Observation loop	=
+LangChain Agents Tutorial
+18=E2=80=9322	Memory Systems	FAISS / Chroma / Pinecone vector DB	=
+LangChain Docs, Pinecone.io
+23=E2=80=9326	Embeddings + RAG	Sentence Transformers, Retrieval =
+QA	HuggingFace + LangChain
+27=E2=80=9328	Integration	Add tools (search, calculator)	=
+LangChain tool calling API
+=F0=9F=92=BB Project:
+=F0=9F=91=89 Document Q&A Assistant that reads PDFs and answers =
+questions (RAG-based).
+Repos:
+LangChain Agents-from-Scratch =
+<https://github.com/langchain-ai/agents-from-scratch?utm_source=3Dchatgpt.=
+com>
+facebookresearch/faiss <https://github.com/facebookresearch/faiss>
+
+=F0=9F=A7=AE Phase 3 =E2=80=93 Reflection, Planning & Reasoning (Week =
+5=E2=80=936)
+Goal: Build reasoning and self-improving agents.
+Focus	Details
+Reflection Loop	Store failed outputs and learn from past actions.
+Chain-of-Hindsight	Build memory-driven reasoning.
+Tool Routing	Let LLMs decide when to use tools.
+=F0=9F=A7=A0 Learn: ReAct, Tree-of-Thought, Chain-of-Hindsight
+=F0=9F=92=BB Project: Self-Improving Task Planner (agent learns from =
+mistakes)
+Repos:
+LangGraph =E2=80=93 ReAct Agent Example =
+<https://github.com/langchain-ai/langgraph>
+AutoGen Tutorials =
+<https://github.com/microsoft/autogen?utm_source=3Dchatgpt.com>
+
+=F0=9F=A4=96 Phase 4 =E2=80=93 Multi-Agent Systems (Week 7=E2=80=939)
+Goal: Build and coordinate multiple agents that work together.
+Week	Study	Project
+Week 7	Learn multi-agent concepts	Router, controller, messaging =
+between agents
+Week 8	Implement communication	Roles: Researcher, Coder, Reviewer
+Week 9	Extend functionality	Add shared memory, planning logic
+=F0=9F=A7=B0 Tools: AutoGen, LangGraph, CrewAI, CAMEL-AI
+=F0=9F=92=BB Project: Research Assistant AI =E2=80=94 Reads papers, =
+summarizes, creates structured reports.
+Repos:
+microsoft/autogen =
+<https://github.com/microsoft/autogen?utm_source=3Dchatgpt.com>
+joaomdmoura/crewAI <https://github.com/joaomdmoura/crewAI>
+camel-ai/camel <https://github.com/camel-ai/camel>
+
+=F0=9F=8C=90 Phase 5 =E2=80=93 Advanced Tools & Integration (Week =
+10=E2=80=9312)
+Goal: Build a full-featured multimodal, connected agent.
+Focus	Topics
+API Integration	Google Search, Slack, Notion, Zapier
+Memory Persistence	Combine SQL + Vector DB
+Multimodal Input	Add GPT-4o (vision + audio)
+Frontend	Build UI with Streamlit or Gradio
+=F0=9F=92=BB Project: Personal AI Executive Assistant =E2=80=94 =
+voice-enabled, web-connected, task automation bot.
+Repos:
+LangChain + Pinecone RAG Demo <https://github.com/pinecone-io/examples>
+OpenAI Whisper + GPT-4o Integration Example =
+<https://github.com/openai/whisper>
+Streamlit Agents Template
+
+=F0=9F=A7=B1 Phase 6 =E2=80=93 Safety, Evaluation & Deployment (Week =
+13=E2=80=9314)
+Goal: Deploy your production-ready agent safely.
+Day	Topics
+1=E2=80=933	Guardrails, Prompt Injections, Safety Layers
+4=E2=80=936	Evaluation metrics, hallucination testing
+7=E2=80=9310	Deployment with Streamlit / FastAPI / Next.js
+11=E2=80=9314	CI/CD & Open-source repo polish
+=F0=9F=92=BB Project: Deploy your own AI Agent Web App on Vercel or AWS.
+Repos:
+Guardrails AI
+FastAPI Agent Deployment
+
+=F0=9F=92=BC Phase 7 =E2=80=93 Monetization & Earning (Week 15+)
+Goal: Turn your skills into income streams.
+Path	Description
+Freelance	Build custom automation bots (content, data, research) =
+for startups on Fiverr / Upwork.
+Product Launch	Publish tools on ProductHunt, Gumroad, or GitHub =
+Sponsors.
+API SaaS	Host your AI agent as a paid API using Render / Railway.
+=F0=9F=A7=B0 Business Tools: Stripe, Gumroad, ProductHunt, Notion, =
+Zapier
+=F0=9F=8E=AF Goal: Generate your first $100=E2=80=93500/month by selling =
+automation or micro-SaaS agents.
+
+=F0=9F=A7=B1 Key Repositories Summary
+Category	Repositories
+Core	LangChain =
+<https://github.com/langchain-ai/langchain?utm_source=3Dchatgpt.com>, =
+LlamaIndex
+Agents	BabyAGI =
+<https://github.com/yoheinakajima/babyagi?utm_source=3Dchatgpt.com>, =
+AutoGen <https://github.com/microsoft/autogen?utm_source=3Dchatgpt.com>, =
+LangGraph <https://github.com/langchain-ai/langgraph>
+Memory	FAISS <https://github.com/facebookresearch/faiss>, Chroma =
+<https://github.com/chroma-core/chroma>
+Multi-Agent	CrewAI <https://github.com/joaomdmoura/crewAI>, CAMEL =
+<https://github.com/camel-ai/camel>
+UI + Deployment	Streamlit <https://github.com/streamlit/streamlit>, =
+FastAPI
+=F0=9F=92=A1 Final Capstone Project Ideas (Monetizable)
+AI Research Assistant SaaS =E2=80=93 Upload papers, summarize, and =
+auto-generate literature reviews.
+Social Media Auto-Agent =E2=80=93 Automates content creation, post =
+scheduling, and engagement.
+AI Coding Copilot for Startups =E2=80=93 Specialized GPT agent for =
+automating internal scripts & documentation.
+
+
+
+
+
+=F0=9F=9A=80 AI Agent Master Roadmap (Beginner =E2=86=92 Advanced =E2=86=92=
+ Earning)
+Duration: 12=E2=80=9316 Weeks
+Time Commitment: 6=E2=80=937 hours/day
+Goal: Go from beginner to project-ready, build multiple LLM-powered =
+autonomous systems, and start earning via freelance, product, or agency =
+work.
+
+=F0=9F=8E=AF Objectives
+Theory: Master core ideas =E2=80=94 LLMs, Planning, Memory, Tool Use, =
+ReAct, Reflexion, RAG, Multi-Agent Systems, Safety.
+Practice: Build AI agents using leading frameworks and open-source =
+repositories.
+Tools: LangChain, AutoGen, AG2, BabyAGI, FAISS, ChromaDB, OpenAI APIs, =
+Hugging Face, etc.
+Outcome: Create a working GitHub portfolio and start monetizing AI agent =
+skills.
+
+=F0=9F=97=93=EF=B8=8F Week-by-Week Plan
+
+=F0=9F=A7=A9 Phase 1: Foundations (Days 1=E2=80=937)
+=F0=9F=8E=AF Goal: Understand what AI agents are and how they work.
+=F0=9F=93=9A Learn:
+Read OpenAI=E2=80=99s =E2=80=9CPractical Guide to Building Agents=E2=80=9D=
+
+=E2=86=92 PDF Link =
+<https://cdn.openai.com/business-guides-and-resources/a-practical-guide-to=
+-building-agents.pdf?utm_source=3Dchatgpt.com>
+Read Lilian Weng=E2=80=99s Blog: LLM-Powered Autonomous Agents (2023)
+Study key ideas:
+Planning =F0=9F=A7=AD
+Memory =F0=9F=A7=A0
+Tool Use =F0=9F=A7=B0
+Learn basic Prompt Engineering and Function Calling (OpenAI/LLM APIs).
+=F0=9F=A7=A0 Practice:
+Experiment with OpenAI function calling and simple reasoning loops.
+=F0=9F=93=98 GitHub Repos:
+LangChain Core =
+<https://github.com/langchain-ai/langchain?utm_source=3Dchatgpt.com>
+Agents from Scratch (LangChain Tutorial) =
+<https://github.com/langchain-ai/agents-from-scratch?utm_source=3Dchatgpt.=
+com>
+
+=F0=9F=A4=96 Phase 2: Build Your First Agent (Week 2)
+=F0=9F=8E=AF Goal: Build a working single-agent demo.
+=F0=9F=93=9A Learn:
+Follow LangChain =E2=80=9CAgents-from-Scratch=E2=80=9D notebook.
+Understand agent loops: Goal =E2=86=92 Plan =E2=86=92 Act =E2=86=92 =
+Reflect.
+=F0=9F=A7=A0 Practice:
+Build your Email Summarizer Agent using LangChain Tools.
+Run the BabyAGI demo to explore task queue & memory.
+=F0=9F=92=A1 Mini Project:
+=E2=80=9CEmail Summarizer & Scheduler Agent=E2=80=9D
+=F0=9F=93=98 GitHub:
+BabyAGI =
+<https://github.com/yoheinakajima/babyagi?utm_source=3Dchatgpt.com>
+AutoGPT =
+<https://github.com/Significant-Gravitas/AutoGPT?utm_source=3Dchatgpt.com>=
+
+
+=F0=9F=A7=A0 Phase 3: Tool Use + Memory (Weeks 3=E2=80=934)
+=F0=9F=8E=AF Goal: Enable your agent to remember and use external tools.
+=F0=9F=93=9A Learn:
+Implement Vector Memory (FAISS / ChromaDB).
+Apply Retrieval-Augmented Generation (RAG).
+Add external APIs (Web search, calculator, Notion, etc.).
+=F0=9F=A7=A0 Practice:
+Implement memory persistence.
+Integrate APIs with LangChain Tools or OpenAI function calling.
+=F0=9F=92=A1 Project:
+=E2=80=9CResearch Summarizer Agent with Memory + Search=E2=80=9D
+=F0=9F=93=98 GitHub:
+LangChain Memory Examples =
+<https://github.com/langchain-ai/langchain?utm_source=3Dchatgpt.com>
+ChromaDB <https://github.com/chroma-core/chroma>
+
+=F0=9F=A7=AD Phase 4: Reflection & Planning (Weeks 5=E2=80=937)
+=F0=9F=8E=AF Goal: Build smarter, self-correcting agents.
+=F0=9F=93=9A Learn:
+Study ReAct pattern (Thought =E2=86=92 Action =E2=86=92 Observation).
+Add Reflection step to improve reasoning over iterations.
+Learn Chain-of-Hindsight and Reflexion models.
+=F0=9F=A7=A0 Practice:
+Implement reflection memory that stores errors and lessons.
+Test your agent=E2=80=99s ability to self-improve over repeated runs.
+=F0=9F=92=A1 Project:
+=E2=80=9CSelf-Improving Q&A Agent=E2=80=9D
+(Uses reflection to refine answers over time.)
+=F0=9F=93=98 GitHub:
+AI Agentic Design Patterns (AutoGen) =
+<https://github.com/martomor/autogen-agentic-design?utm_source=3Dchatgpt.c=
+om>
+AG2 =E2=80=93 Open AutoGen Fork =
+<https://github.com/ag2ai/ag2?utm_source=3Dchatgpt.com>
+
+=F0=9F=A7=91=E2=80=8D=F0=9F=92=BB Phase 5: Multi-Agent Systems (Weeks =
+8=E2=80=9310)
+=F0=9F=8E=AF Goal: Build collaborative agents that work as a team.
+=F0=9F=93=9A Learn:
+Explore AutoGen / AG2 for multi-agent collaboration.
+Study Planner + Worker and Router + Specialist architectures.
+Learn message passing and conversation loops.
+=F0=9F=A7=A0 Practice:
+Create 3 agents: Researcher, Coder, Writer.
+Enable them to pass tasks and verify each other=E2=80=99s output.
+=F0=9F=92=A1 Project:
+=E2=80=9CMulti-Agent Startup Assistant=E2=80=9D
+(Agents collaborate on product research, design, and content.)
+=F0=9F=93=98 GitHub:
+Microsoft AutoGen =
+<https://github.com/microsoft/autogen?utm_source=3Dchatgpt.com>
+AG2 Community Edition =
+<https://github.com/ag2ai/ag2?utm_source=3Dchatgpt.com>
+
+=E2=9A=99=EF=B8=8F Phase 6: Evaluation, Safety & Optimization (Weeks =
+11=E2=80=9312)
+=F0=9F=8E=AF Goal: Build reliable, ethical, and testable AI agents.
+=F0=9F=93=9A Learn:
+Safety filters, reward heuristics, and human feedback loops.
+Deterministic evaluation metrics for LLM reasoning.
+Use smaller models for local tests (Ollama, Llama 3, etc.).
+=F0=9F=A7=A0 Practice:
+Add evaluation scripts and fail-safe checks.
+Create a dashboard to monitor tool calls and memory logs.
+=F0=9F=92=A1 Project:
+=E2=80=9CAgent Evaluation & Safety Dashboard=E2=80=9D
+=F0=9F=93=98 Resources:
+OpenAI guide (Safety section)
+LangChain evaluation toolkit
+Hugging Face eval frameworks
+
+=F0=9F=92=BC Phase 7: Build & Earn (Weeks 13=E2=80=9316)
+=F0=9F=8E=AF Goal: Launch your portfolio and monetize your agent skills.
+=F0=9F=93=9A Learn:
+Package your agents as reusable apps or APIs.
+Write technical documentation and case studies.
+Learn to deploy with Streamlit, FastAPI, or Vercel.
+=F0=9F=92=B0 Monetize:
+Freelance platforms: Upwork, Fiverr, Toptal
+AI product microservices
+Agency / internship opportunities
+=F0=9F=92=A1 Final Projects:
+=F0=9F=A7=A9 =E2=80=9CMulti-Agent Research Lab=E2=80=9D
+=F0=9F=93=84 =E2=80=9CSmart Resume Builder Agent=E2=80=9D
+=F0=9F=8E=A5 =E2=80=9CYouTube Script Research & Generation Bot=E2=80=9D
+
+=F0=9F=94=97 GitHub Learning & Reference Links
+Category	Repo / Source	Purpose
+LangChain	langchain-ai/langchain =
+<https://github.com/langchain-ai/langchain?utm_source=3Dchatgpt.com>	=
+Core agent framework
+BabyAGI	yoheinakajima/babyagi =
+<https://github.com/yoheinakajima/babyagi?utm_source=3Dchatgpt.com>	=
+Minimal task agent
+AutoGPT	Significant-Gravitas/AutoGPT =
+<https://github.com/Significant-Gravitas/AutoGPT?utm_source=3Dchatgpt.com>=
+	End-to-end autonomous agent
+AutoGen	microsoft/autogen =
+<https://github.com/microsoft/autogen?utm_source=3Dchatgpt.com>	=
+Multi-agent framework
+AG2	ag2ai/ag2 <https://github.com/ag2ai/ag2?utm_source=3Dchatgpt.com>	=
+Open-source AutoGen evolution
+Awesome Agents	e2b-dev/awesome-ai-agents =
+<https://github.com/e2b-dev/awesome-ai-agents?utm_source=3Dchatgpt.com>	=
+Curated AI agent lists
+LangChain Agents-from-Scratch	langchain-ai/agents-from-scratch =
+<https://github.com/langchain-ai/agents-from-scratch?utm_source=3Dchatgpt.=
+com>	Core tutorial repo
+Agentic Design Patterns	martomor/autogen-agentic-design =
+<https://github.com/martomor/autogen-agentic-design?utm_source=3Dchatgpt.c=
+om>	Design patterns in AutoGen
+=F0=9F=A7=B0 Recommended Tool Stack
+Category	Tool	Description
+LLM APIs	OpenAI GPT-4o / Claude / Gemini	Core reasoning models
+Framework	LangChain / AutoGen / AG2	Agent orchestration
+Memory	FAISS / Chroma / Milvus	Vector databases
+Evaluation	Hugging Face / LangSmith	Testing & monitoring
+Deployment	Streamlit / FastAPI / Docker	Web & API deployment
+DevOps	Git / VSCode / Python venv	Setup tools
+
+
+
+=F0=9F=9A=80 16-Week AI Agent Development Roadmap
+Goal: Master AI Agent systems (LLM-powered), build real projects, and =
+start earning via freelance, SaaS, or client automation tools.
+Daily Study: ~6=E2=80=937 hrs/day
+=F0=9F=A7=A0 1.5h Theory & Reading=E2=80=83=E2=9A=99=EF=B8=8F 1.5h =
+Tools=E2=80=83=F0=9F=92=BB 2h Coding=E2=80=83=F0=9F=A7=A9 2h Project
+
+=F0=9F=A7=A9 Phase 1 =E2=80=93 Foundations (Week 1=E2=80=932)
+=F0=9F=8E=AF Goal: Understand what AI Agents are & how LLMs reason, =
+plan, and act.
+Focus	Topics	Tools	Projects	Outcome
+=F0=9F=A7=A0 Theory (1.5h/day)	=E2=80=A2 What is an AI Agent
+=E2=80=A2 LLM reasoning & Chain-of-Thought
+=E2=80=A2 ReAct pattern & architecture
+=E2=80=A2 Planning, Memory, Tool Use overview
+=E2=80=A2 Lilian Weng=E2=80=99s =E2=80=9CLLM-Powered Agents=E2=80=9D =
+blog
+=E2=80=A2 OpenAI=E2=80=99s =E2=80=9CPractical Guide to Building =
+Agents=E2=80=9D	=E2=80=94	=E2=80=94	Clear conceptual model =
+of AI Agent lifecycle
+=E2=9A=99=EF=B8=8F Tools (1.5h/day)	=E2=80=A2 Python setup
+=E2=80=A2 OpenAI API basics
+=E2=80=A2 LangChain install + quickstart
+=E2=80=A2 Jupyter, GitHub setup	Python, LangChain, OpenAI API	=E2=80=94	=
+Working environment ready
+=F0=9F=92=BB Coding (2h/day)	=E2=80=A2 LangChain =
+=E2=80=9CAgents-from-Scratch=E2=80=9D tutorial
+=E2=80=A2 Simple prompt chaining
+=E2=80=A2 Function calling example	LangChain Core	=E2=80=94	=
+Build-first familiarity
+=F0=9F=A7=A9 Project (2h/day)	Mini Project: Simple ChatGPT-style =
+assistant using LangChain	LangChain	Personal Chat Agent	=
+Run basic single-agent workflow
+=F0=9F=95=92 Weekly Total: 42=E2=80=9345 hrs
+=E2=9C=85 Skill Outcome: Can explain + prototype a simple LLM agent.
+
+=F0=9F=A4=96 Phase 2 =E2=80=93 Core Agent Development (Week 3=E2=80=934)
+=F0=9F=8E=AF Goal: Implement tool use, task loops & short-term memory.
+Focus	Topics	Tools	Projects	Outcome
+=F0=9F=A7=A0 Theory	=E2=80=A2 Agent loops & task decomposition
+=E2=80=A2 BabyAGI architecture
+=E2=80=A2 Role of memory in autonomous loops	=E2=80=94	=E2=80=94	=
+Understand iterative reasoning loops
+=E2=9A=99=EF=B8=8F Tools	=E2=80=A2 LangChain AgentExecutor
+=E2=80=A2 BabyAGI setup
+=E2=80=A2 Environment variables, OpenAI keys	LangChain, BabyAGI	=
+=E2=80=94	Can run and modify agent notebooks
+=F0=9F=92=BB Coding	=E2=80=A2 Implement =E2=80=9CAgents-from-Scratch=E2=
+=80=9D notebook
+=E2=80=A2 Build chain-of-thought agent	LangChain	=E2=80=94	=
+Reusable base template
+=F0=9F=A7=A9 Project	Mini Project: =E2=80=9CEmail summarizer & =
+scheduler agent=E2=80=9D	LangChain, BabyAGI	Email Assistant =
+Agent	Fully functional tool-using agent
+=F0=9F=93=98 GitHub:
+LangChain Agents-from-Scratch =
+<https://github.com/langchain-ai/agents-from-scratch?utm_source=3Dchatgpt.=
+com>
+BabyAGI =
+<https://github.com/yoheinakajima/babyagi?utm_source=3Dchatgpt.com>
+AutoGPT =
+<https://github.com/Significant-Gravitas/AutoGPT?utm_source=3Dchatgpt.com>=
+
+=F0=9F=95=92 Weekly Total: 84 hrs (2 weeks)
+=E2=9C=85 Skill Outcome: Build & debug self-running agents.
+
+=F0=9F=A7=A0 Phase 3 =E2=80=93 Tool Use + Memory (Week 5=E2=80=936)
+=F0=9F=8E=AF Goal: Add knowledge retrieval (RAG) + long-term memory.
+Focus	Topics	Tools	Projects	Outcome
+=F0=9F=A7=A0 Theory	=E2=80=A2 Embeddings, vector databases
+=E2=80=A2 RAG (Retrieval-Augmented Generation)
+=E2=80=A2 Context windows & prompt injection	=E2=80=94	=E2=80=94	=
+Understand how agents =E2=80=9Cremember=E2=80=9D
+=E2=9A=99=EF=B8=8F Tools	=E2=80=A2 FAISS, ChromaDB setup
+=E2=80=A2 LangChain memory modules
+=E2=80=A2 Hugging Face embeddings	FAISS, Chroma, LangChain	=
+=E2=80=94	Manage vector stores
+=F0=9F=92=BB Coding	=E2=80=A2 Implement retrieval chain
+=E2=80=A2 Add custom tools: Web search, file reader	LangChain, =
+OpenAI API	=E2=80=94	Working memory system
+=F0=9F=A7=A9 Project	Project: =E2=80=9CResearch Summarizer Agent=E2=80=9D=
+ with search + memory	LangChain + FAISS	Research Assistant	=
+Reads, stores, and recalls documents
+=F0=9F=93=98 GitHub:
+LangChain Memory Examples =
+<https://github.com/langchain-ai/langchain?utm_source=3Dchatgpt.com>
+ChromaDB <https://github.com/chroma-core/chroma>
+=F0=9F=95=92 Weekly Total: ~84 hrs (2 weeks)
+=E2=9C=85 Skill Outcome: Implement long-term memory + retrieval.
+
+=F0=9F=A7=AD Phase 4 =E2=80=93 Reflection & Planning (Week 7=E2=80=938)
+=F0=9F=8E=AF Goal: Implement reasoning, self-evaluation, and reflexion.
+Focus	Topics	Tools	Projects	Outcome
+=F0=9F=A7=A0 Theory	=E2=80=A2 ReAct pattern (Thought =E2=86=92 =
+Action =E2=86=92 Observation)
+=E2=80=A2 Reflexion, Chain-of-Hindsight
+=E2=80=A2 Evaluation heuristics	=E2=80=94	=E2=80=94	=
+Understand self-improving logic
+=E2=9A=99=EF=B8=8F Tools	=E2=80=A2 Prompt logging, agent feedback =
+loop
+=E2=80=A2 ReAct templates	LangChain, AutoGen	=E2=80=94	=
+Framework for reflection
+=F0=9F=92=BB Coding	=E2=80=A2 ReAct-style reasoning loops
+=E2=80=A2 Chain-of-hindsight evaluation	LangChain, OpenAI	=E2=80=94	=
+Smart agent reasoning
+=F0=9F=A7=A9 Project	Project: =E2=80=9CSelf-Improving Q&A Agent=E2=80=9D=
+	LangChain, AutoGen	Reflexive Agent	Evaluates and improves =
+answers
+=F0=9F=93=98 GitHub:
+AI Agentic Design Patterns (AutoGen) =
+<https://github.com/martomor/autogen-agentic-design?utm_source=3Dchatgpt.c=
+om>
+AG2 (open AutoGen fork) =
+<https://github.com/ag2ai/ag2?utm_source=3Dchatgpt.com>
+=F0=9F=95=92 Weekly Total: ~84 hrs (2 weeks)
+=E2=9C=85 Skill Outcome: Build agents that reason, plan, and reflect.
+
+=F0=9F=A7=91=E2=80=8D=F0=9F=92=BB Phase 5 =E2=80=93 Multi-Agent Systems =
+(Week 9=E2=80=9311)
+=F0=9F=8E=AF Goal: Build multi-role agents that collaborate =
+intelligently.
+Focus	Topics	Tools	Projects	Outcome
+=F0=9F=A7=A0 Theory	=E2=80=A2 Multi-agent communication & routing
+=E2=80=A2 Specialist vs. Generalist agents
+=E2=80=A2 Controllers, message passing	=E2=80=94	=E2=80=94	=
+Learn cooperative intelligence
+=E2=9A=99=EF=B8=8F Tools	=E2=80=A2 AutoGen / AG2 multi-agent APIs
+=E2=80=A2 LangGraph & CrewAI overview	AutoGen, AG2, LangGraph	=E2=80=94	=
+Control multi-agent orchestration
+=F0=9F=92=BB Coding	=E2=80=A2 Build Planner + Worker + Reviewer =
+pipeline	AutoGen	=E2=80=94	Parallel reasoning
+=F0=9F=A7=A9 Project	Project: =E2=80=9CAI Startup Assistant=E2=80=9D =
+(researcher, coder, writer)	AutoGen, AG2	Multi-Agent System	=
+End-to-end collaboration
+=F0=9F=93=98 GitHub:
+Microsoft AutoGen =
+<https://github.com/microsoft/autogen?utm_source=3Dchatgpt.com>
+AG2 Community Version =
+<https://github.com/ag2ai/ag2?utm_source=3Dchatgpt.com>
+=F0=9F=95=92 Weekly Total: ~126 hrs (3 weeks)
+=E2=9C=85 Skill Outcome: Multi-agent collaboration systems.
+
+=E2=9A=99=EF=B8=8F Phase 6 =E2=80=93 Evaluation, Safety & Optimization =
+(Week 12=E2=80=9313)
+=F0=9F=8E=AF Goal: Build safe, testable, and ethical agents.
+Focus	Topics	Tools	Projects	Outcome
+=F0=9F=A7=A0 Theory	=E2=80=A2 Hallucination & bias control
+=E2=80=A2 Human-in-loop design
+=E2=80=A2 Reward heuristics	=E2=80=94	=E2=80=94	=
+Understand safe deployment
+=E2=9A=99=EF=B8=8F Tools	=E2=80=A2 LangChain Eval toolkit
+=E2=80=A2 Hugging Face evaluation
+=E2=80=A2 Logging & monitoring	LangChain Eval, HF	=E2=80=94	=
+Measurable outputs
+=F0=9F=92=BB Coding	=E2=80=A2 Add unit tests, metrics, deterministic =
+config	Python, LangChain	=E2=80=94	Reliable agent code
+=F0=9F=A7=A9 Project	Project: =E2=80=9CAgent Evaluation Dashboard=E2=80=
+=9D	LangChain, Streamlit	Eval Dashboard	Visual safety metrics
+=F0=9F=93=98 Resources:
+LangChain Evaluation Toolkit
+OpenAI Safety Guidelines =
+<https://platform.openai.com/docs/guides/safety-best-practices>
+=F0=9F=95=92 Weekly Total: 84 hrs (2 weeks)
+=E2=9C=85 Skill Outcome: Trustworthy, evaluable AI agents.
+
+=F0=9F=92=BC Phase 7 =E2=80=93 Portfolio & Monetization (Week 14=E2=80=931=
+6)
+=F0=9F=8E=AF Goal: Showcase skills, deploy projects & start earning.
+Focus	Topics	Tools	Projects	Outcome
+=F0=9F=A7=A0 Theory	=E2=80=A2 Freelancing strategy (Upwork, Fiverr)
+=E2=80=A2 Productized micro-SaaS ideas
+=E2=80=A2 Client onboarding & pricing	=E2=80=94	=E2=80=94	=
+Business mindset
+=E2=9A=99=EF=B8=8F Tools	=E2=80=A2 GitHub portfolio setup
+=E2=80=A2 Notion/Website portfolio
+=E2=80=A2 CI/CD basics (Render, Vercel)	GitHub, Streamlit, Vercel	=
+=E2=80=94	Launch ready
+=F0=9F=92=BB Coding	=E2=80=A2 Refactor old projects
+=E2=80=A2 Integrate UIs (Streamlit/Gradio)	LangChain, Gradio	=
+=E2=80=94	User-facing demos
+=F0=9F=A7=A9 Project	Capstone Launch: Your own AI agent product or =
+service	Streamlit, AutoGen	Personal AI Product	Public release =
+ready
+=F0=9F=92=A1 Capstone Project Ideas:
+=F0=9F=A7=A0 Multi-Agent Research Lab =E2=80=93 autonomous team that =
+reads papers & writes reports.
+=F0=9F=A7=BE Smart Resume Builder Agent =E2=80=93 personal branding & =
+resume optimizer.
+=F0=9F=8E=A5 YouTube Script & Research Agent =E2=80=93 finds topics, =
+summarizes sources, writes scripts.
+=F0=9F=95=92 Weekly Total: 126 hrs (3 weeks)
+=E2=9C=85 Skill Outcome: Deployed, monetizable AI agent portfolio.
+
+=F0=9F=93=A6 Final Output Checklist
+=E2=9C=85 5=E2=80=937 Completed Agent Projects
+=E2=9C=85 GitHub Portfolio + Docs
+=E2=9C=85 Proficiency in: LangChain, AutoGen, FAISS/Chroma, Reflexion, =
+RAG
+=E2=9C=85 Knowledge of: Planning, Memory, Safety, Evaluation
+=E2=9C=85 Freelance/Internship-Ready
+
+=F0=9F=94=97 Essential GitHub & Resource Directory
+Category	Repository / Source	Purpose
+Core Framework	langchain-ai/langchain =
+<https://github.com/langchain-ai/langchain?utm_source=3Dchatgpt.com>	=
+Foundation for agent creation
+Minimal Agents	yoheinakajima/babyagi =
+<https://github.com/yoheinakajima/babyagi?utm_source=3Dchatgpt.com>	=
+Learn agent loops
+Autonomous Demo	Significant-Gravitas/AutoGPT =
+<https://github.com/Significant-Gravitas/AutoGPT?utm_source=3Dchatgpt.com>=
+	Observe full automation
+Multi-Agent	microsoft/autogen =
+<https://github.com/microsoft/autogen?utm_source=3Dchatgpt.com>	=
+Team-based agents
+Open Fork	ag2ai/ag2 =
+<https://github.com/ag2ai/ag2?utm_source=3Dchatgpt.com>	Community =
+multi-agent system
+Design Patterns	martomor/autogen-agentic-design =
+<https://github.com/martomor/autogen-agentic-design?utm_source=3Dchatgpt.c=
+om>	Architectural templates
+Memory	chroma-core/chroma <https://github.com/chroma-core/chroma>	=
+Vector database
+Evaluations	langchain-ai/eval =
+<https://github.com/langchain-ai/langchain?utm_source=3Dchatgpt.com>	=
+Test and validate agents
+Awesome Agents	e2b-dev/awesome-ai-agents =
+<https://github.com/e2b-dev/awesome-ai-agents?utm_source=3Dchatgpt.com>	=
+Curated learning repo=
+
+--Apple-Mail=_2CB6B795-EBCD-4001-9482-BC07A8DA3B2E
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html;
+	charset=utf-8
+
+<html><head><meta http-equiv=3D"content-type" content=3D"text/html; =
+charset=3Dutf-8"></head><body style=3D"overflow-wrap: break-word; =
+-webkit-nbsp-mode: space; line-break: after-white-space;"><div><p =
+style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica Neue" =
+size=3D"5" style=3D"font: 20.0px 'Helvetica Neue'">=F0=9F=9A=80<b> AI =
+Agent Development Master Roadmap</b></font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'"><b>Goal:</b> =
+Become a full-stack AI Agent Developer (LLM-powered systems, autonomous =
+workflows, monetization-ready).<br>
+<b>Total Duration:</b> 14 Weeks (=E2=89=883.5 Months)<br>
+<b>Daily Time:</b> 6=E2=80=937 Hours<br>
+<b>Weekly Format:</b><b></b></font></p>
+<ul style=3D"list-style-type: disc">
+<li style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'">=F0=9F=A7=A0 =
+Theory &amp; Reading =E2=80=93 1.5 hr/day</font></li>
+<li style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'">=E2=9A=99=EF=B8=8F=
+ Tools &amp; Tutorials =E2=80=93 1.5 hr/day</font></li>
+<li style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'">=F0=9F=92=BB =
+Coding Practice =E2=80=93 2 hr/day</font></li>
+<li style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'">=F0=9F=A7=A9 =
+Project Building =E2=80=93 2 hr/day</font></li>
+</ul>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px 'Helvetica =
+Neue'; min-height: 15.0px"><br></p>
+<p style=3D"margin: 0.0px 0.0px 2.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"5" style=3D"font: 16.0px 'Helvetica Neue'">=F0=9F=A7=A9<b> =
+Phase 1 =E2=80=93 Foundations (Week 1=E2=80=932)</b></font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'"><b>Goal:</b> =
+Understand LLMs, Agents, Prompts, and Architecture.</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica" =
+size=3D"3" style=3D"font: 12.0px Helvetica">Day<span =
+class=3D"Apple-tab-span" style=3D"white-space:pre">	=
+</span>Focus<span class=3D"Apple-tab-span" style=3D"white-space:pre">	=
+</span>Topics / Resources<span class=3D"Apple-tab-span" =
+style=3D"white-space:pre">	</span>Tools</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica" =
+size=3D"3" style=3D"font: 12.0px Helvetica">1=E2=80=933<span =
+class=3D"Apple-tab-span" style=3D"white-space:pre">	</span>AI Agent =
+Basics<span class=3D"Apple-tab-span" style=3D"white-space:pre">	=
+</span>What is an LLM, difference between chatbots &amp; agents, =
+reasoning patterns<span class=3D"Apple-tab-span" =
+style=3D"white-space:pre">	</span>YouTube (Two Minute Papers, =
+Lilian Weng), OpenAI docs</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica" =
+size=3D"3" style=3D"font: 12.0px Helvetica">4=E2=80=936<span =
+class=3D"Apple-tab-span" style=3D"white-space:pre">	</span>Prompt =
+Engineering<span class=3D"Apple-tab-span" style=3D"white-space:pre">	=
+</span>ReAct, Chain-of-Thought, and Zero/Few-Shot prompts<span =
+class=3D"Apple-tab-span" style=3D"white-space:pre">	</span>OpenAI =
+Cookbook, DeepLearning.AI Prompting Course</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica" =
+size=3D"3" style=3D"font: 12.0px Helvetica">7=E2=80=9310<span =
+class=3D"Apple-tab-span" style=3D"white-space:pre">	</span>LLM =
+Architecture<span class=3D"Apple-tab-span" style=3D"white-space:pre">	=
+</span>Transformers, embeddings, context window<span =
+class=3D"Apple-tab-span" style=3D"white-space:pre">	</span>Hugging =
+Face =E2=80=9CTransformer Illustrated=E2=80=9D</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica" =
+size=3D"3" style=3D"font: 12.0px Helvetica">11=E2=80=9314<span =
+class=3D"Apple-tab-span" style=3D"white-space:pre">	</span>Tool =
+Setup + Mini Project<span class=3D"Apple-tab-span" =
+style=3D"white-space:pre">	</span>Python, Jupyter, LangChain, =
+OpenAI API, GitHub setup<span class=3D"Apple-tab-span" =
+style=3D"white-space:pre">	</span>LangChain, VS Code</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'">=F0=9F=A7=A0 =
+<b>Reading:</b><b></b></font></p>
+<ul style=3D"list-style-type: disc">
+<li style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'"><a =
+href=3D"https://platform.openai.com/docs/guides/agents">OpenAI Practical =
+Guide to Building Agents</a></font></li>
+<li style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'"><a =
+href=3D"https://lilianweng.github.io/posts/2023-06-23-agent/?utm_source=3D=
+chatgpt.com">Lilian Weng =E2=80=93 LLM-Powered Autonomous =
+Agents</a></font></li>
+<li style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'">Agent Design =
+Patterns (Parts 1=E2=80=935)</font></li>
+</ul>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'">=F0=9F=92=BB =
+<b>Mini Project:</b><br>
+=F0=9F=91=89 <i>Build a ChatGPT-style personal assistant using LangChain =
++ OpenAI API.</i><i></i></font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px 'Helvetica =
+Neue'; min-height: 15.0px"><br></p>
+<p style=3D"margin: 0.0px 0.0px 2.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"5" style=3D"font: 16.0px 'Helvetica Neue'">=E2=9A=99=EF=B8=8F=
+<b> Phase 2 =E2=80=93 Core Agent Development (Week 3=E2=80=934)</b></font>=
+</p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'"><b>Goal:</b> =
+Build RAG + Tool-Using Agents.</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica" =
+size=3D"3" style=3D"font: 12.0px Helvetica">Day<span =
+class=3D"Apple-tab-span" style=3D"white-space:pre">	=
+</span>Focus<span class=3D"Apple-tab-span" style=3D"white-space:pre">	=
+</span>Topics / Tools<span class=3D"Apple-tab-span" =
+style=3D"white-space:pre">	</span>Project</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica" =
+size=3D"3" style=3D"font: 12.0px Helvetica">15=E2=80=9317<span =
+class=3D"Apple-tab-span" style=3D"white-space:pre">	</span>ReAct =
+Agents<span class=3D"Apple-tab-span" style=3D"white-space:pre">	=
+</span>Thought/Action/Observation loop<span class=3D"Apple-tab-span" =
+style=3D"white-space:pre">	</span>LangChain Agents =
+Tutorial</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica" =
+size=3D"3" style=3D"font: 12.0px Helvetica">18=E2=80=9322<span =
+class=3D"Apple-tab-span" style=3D"white-space:pre">	</span>Memory =
+Systems<span class=3D"Apple-tab-span" style=3D"white-space:pre">	=
+</span>FAISS / Chroma / Pinecone vector DB<span class=3D"Apple-tab-span" =
+style=3D"white-space:pre">	</span>LangChain Docs, =
+Pinecone.io</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica" =
+size=3D"3" style=3D"font: 12.0px Helvetica">23=E2=80=9326<span =
+class=3D"Apple-tab-span" style=3D"white-space:pre">	=
+</span>Embeddings + RAG<span class=3D"Apple-tab-span" =
+style=3D"white-space:pre">	</span>Sentence Transformers, Retrieval =
+QA<span class=3D"Apple-tab-span" style=3D"white-space:pre">	=
+</span>HuggingFace + LangChain</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica" =
+size=3D"3" style=3D"font: 12.0px Helvetica">27=E2=80=9328<span =
+class=3D"Apple-tab-span" style=3D"white-space:pre">	=
+</span>Integration<span class=3D"Apple-tab-span" =
+style=3D"white-space:pre">	</span>Add tools (search, =
+calculator)<span class=3D"Apple-tab-span" style=3D"white-space:pre">	=
+</span>LangChain tool calling API</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'">=F0=9F=92=BB =
+<b>Project:</b><br>
+=F0=9F=91=89 <i>Document Q&amp;A Assistant that reads PDFs and answers =
+questions (RAG-based).</i><br>
+<b>Repos:</b><b></b></font></p>
+<ul style=3D"list-style-type: disc">
+<li style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'"><a =
+href=3D"https://github.com/langchain-ai/agents-from-scratch?utm_source=3Dc=
+hatgpt.com">LangChain Agents-from-Scratch</a></font></li>
+<li style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'"><a =
+href=3D"https://github.com/facebookresearch/faiss">facebookresearch/faiss<=
+/a></font></li>
+</ul>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px 'Helvetica =
+Neue'; min-height: 15.0px"><br></p>
+<p style=3D"margin: 0.0px 0.0px 2.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"5" style=3D"font: 16.0px 'Helvetica Neue'">=F0=9F=A7=AE<b> =
+Phase 3 =E2=80=93 Reflection, Planning &amp; Reasoning (Week =
+5=E2=80=936)</b></font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'"><b>Goal:</b> =
+Build reasoning and self-improving agents.</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica" =
+size=3D"3" style=3D"font: 12.0px Helvetica">Focus<span =
+class=3D"Apple-tab-span" style=3D"white-space:pre">	=
+</span>Details</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica" =
+size=3D"3" style=3D"font: 12.0px Helvetica">Reflection Loop<span =
+class=3D"Apple-tab-span" style=3D"white-space:pre">	</span>Store =
+failed outputs and learn from past actions.</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica" =
+size=3D"3" style=3D"font: 12.0px Helvetica">Chain-of-Hindsight<span =
+class=3D"Apple-tab-span" style=3D"white-space:pre">	</span>Build =
+memory-driven reasoning.</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica" =
+size=3D"3" style=3D"font: 12.0px Helvetica">Tool Routing<span =
+class=3D"Apple-tab-span" style=3D"white-space:pre">	</span>Let LLMs =
+decide when to use tools.</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'">=F0=9F=A7=A0 =
+<b>Learn:</b> ReAct, Tree-of-Thought, Chain-of-Hindsight<br>
+=F0=9F=92=BB <b>Project:</b> <i>Self-Improving Task Planner</i> (agent =
+learns from mistakes)</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica =
+Neue'"><b>Repos:</b><b></b></font></p>
+<ul style=3D"list-style-type: disc">
+<li style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'"><a =
+href=3D"https://github.com/langchain-ai/langgraph">LangGraph =E2=80=93 =
+ReAct Agent Example</a></font></li>
+<li style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'"><a =
+href=3D"https://github.com/microsoft/autogen?utm_source=3Dchatgpt.com">Aut=
+oGen Tutorials</a></font></li>
+</ul>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px 'Helvetica =
+Neue'; min-height: 15.0px"><br></p>
+<p style=3D"margin: 0.0px 0.0px 2.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"5" style=3D"font: 16.0px 'Helvetica Neue'">=F0=9F=A4=96<b> =
+Phase 4 =E2=80=93 Multi-Agent Systems (Week 7=E2=80=939)</b></font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'"><b>Goal:</b> =
+Build and coordinate multiple agents that work together.</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica" =
+size=3D"3" style=3D"font: 12.0px Helvetica">Week<span =
+class=3D"Apple-tab-span" style=3D"white-space:pre">	=
+</span>Study<span class=3D"Apple-tab-span" style=3D"white-space:pre">	=
+</span>Project</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica" =
+size=3D"3" style=3D"font: 12.0px Helvetica">Week 7<span =
+class=3D"Apple-tab-span" style=3D"white-space:pre">	</span>Learn =
+multi-agent concepts<span class=3D"Apple-tab-span" =
+style=3D"white-space:pre">	</span>Router, controller, messaging =
+between agents</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica" =
+size=3D"3" style=3D"font: 12.0px Helvetica">Week 8<span =
+class=3D"Apple-tab-span" style=3D"white-space:pre">	</span>Implement =
+communication<span class=3D"Apple-tab-span" style=3D"white-space:pre">	=
+</span>Roles: Researcher, Coder, Reviewer</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica" =
+size=3D"3" style=3D"font: 12.0px Helvetica">Week 9<span =
+class=3D"Apple-tab-span" style=3D"white-space:pre">	</span>Extend =
+functionality<span class=3D"Apple-tab-span" style=3D"white-space:pre">	=
+</span>Add shared memory, planning logic</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'">=F0=9F=A7=B0 =
+<b>Tools:</b> AutoGen, LangGraph, CrewAI, CAMEL-AI<br>
+=F0=9F=92=BB <b>Project:</b> <i>Research Assistant AI =E2=80=94 Reads =
+papers, summarizes, creates structured reports.</i><i></i></font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica =
+Neue'"><b>Repos:</b><b></b></font></p>
+<ul style=3D"list-style-type: disc">
+<li style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'"><a =
+href=3D"https://github.com/microsoft/autogen?utm_source=3Dchatgpt.com">mic=
+rosoft/autogen</a></font></li>
+<li style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'"><a =
+href=3D"https://github.com/joaomdmoura/crewAI">joaomdmoura/crewAI</a></fon=
+t></li>
+<li style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'"><a =
+href=3D"https://github.com/camel-ai/camel">camel-ai/camel</a></font></li>
+</ul>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px 'Helvetica =
+Neue'; min-height: 15.0px"><br></p>
+<p style=3D"margin: 0.0px 0.0px 2.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"5" style=3D"font: 16.0px 'Helvetica Neue'">=F0=9F=8C=90<b> =
+Phase 5 =E2=80=93 Advanced Tools &amp; Integration (Week =
+10=E2=80=9312)</b></font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'"><b>Goal:</b> =
+Build a full-featured multimodal, connected agent.</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica" =
+size=3D"3" style=3D"font: 12.0px Helvetica">Focus<span =
+class=3D"Apple-tab-span" style=3D"white-space:pre">	=
+</span>Topics</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica" =
+size=3D"3" style=3D"font: 12.0px Helvetica">API Integration<span =
+class=3D"Apple-tab-span" style=3D"white-space:pre">	</span>Google =
+Search, Slack, Notion, Zapier</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica" =
+size=3D"3" style=3D"font: 12.0px Helvetica">Memory Persistence<span =
+class=3D"Apple-tab-span" style=3D"white-space:pre">	</span>Combine =
+SQL + Vector DB</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica" =
+size=3D"3" style=3D"font: 12.0px Helvetica">Multimodal Input<span =
+class=3D"Apple-tab-span" style=3D"white-space:pre">	</span>Add =
+GPT-4o (vision + audio)</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica" =
+size=3D"3" style=3D"font: 12.0px Helvetica">Frontend<span =
+class=3D"Apple-tab-span" style=3D"white-space:pre">	</span>Build UI =
+with Streamlit or Gradio</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'">=F0=9F=92=BB =
+<b>Project:</b> <i>Personal AI Executive Assistant</i> =E2=80=94 =
+voice-enabled, web-connected, task automation bot.</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica =
+Neue'"><b>Repos:</b><b></b></font></p>
+<ul style=3D"list-style-type: disc">
+<li style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'"><a =
+href=3D"https://github.com/pinecone-io/examples">LangChain + Pinecone =
+RAG Demo</a></font></li>
+<li style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'"><a =
+href=3D"https://github.com/openai/whisper">OpenAI Whisper + GPT-4o =
+Integration Example</a></font></li>
+<li style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'">Streamlit =
+Agents Template</font></li>
+</ul>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px 'Helvetica =
+Neue'; min-height: 15.0px"><br></p>
+<p style=3D"margin: 0.0px 0.0px 2.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"5" style=3D"font: 16.0px 'Helvetica Neue'">=F0=9F=A7=B1<b> =
+Phase 6 =E2=80=93 Safety, Evaluation &amp; Deployment (Week =
+13=E2=80=9314)</b></font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'"><b>Goal:</b> =
+Deploy your production-ready agent safely.</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica" =
+size=3D"3" style=3D"font: 12.0px Helvetica">Day<span =
+class=3D"Apple-tab-span" style=3D"white-space:pre">	=
+</span>Topics</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica" =
+size=3D"3" style=3D"font: 12.0px Helvetica">1=E2=80=933<span =
+class=3D"Apple-tab-span" style=3D"white-space:pre">	=
+</span>Guardrails, Prompt Injections, Safety Layers</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica" =
+size=3D"3" style=3D"font: 12.0px Helvetica">4=E2=80=936<span =
+class=3D"Apple-tab-span" style=3D"white-space:pre">	=
+</span>Evaluation metrics, hallucination testing</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica" =
+size=3D"3" style=3D"font: 12.0px Helvetica">7=E2=80=9310<span =
+class=3D"Apple-tab-span" style=3D"white-space:pre">	=
+</span>Deployment with Streamlit / FastAPI / Next.js</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica" =
+size=3D"3" style=3D"font: 12.0px Helvetica">11=E2=80=9314<span =
+class=3D"Apple-tab-span" style=3D"white-space:pre">	</span>CI/CD =
+&amp; Open-source repo polish</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'">=F0=9F=92=BB =
+<b>Project:</b> <i>Deploy your own AI Agent Web App on Vercel or =
+AWS.</i><br>
+<b>Repos:</b><b></b></font></p>
+<ul style=3D"list-style-type: disc">
+<li style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'">Guardrails =
+AI</font></li>
+<li style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'">FastAPI Agent =
+Deployment</font></li>
+</ul>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px 'Helvetica =
+Neue'; min-height: 15.0px"><br></p>
+<p style=3D"margin: 0.0px 0.0px 2.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"5" style=3D"font: 16.0px 'Helvetica Neue'">=F0=9F=92=BC<b> =
+Phase 7 =E2=80=93 Monetization &amp; Earning (Week 15+)</b></font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'"><b>Goal:</b> =
+Turn your skills into income streams.</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica" =
+size=3D"3" style=3D"font: 12.0px Helvetica">Path<span =
+class=3D"Apple-tab-span" style=3D"white-space:pre">	=
+</span>Description</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica" =
+size=3D"3" style=3D"font: 12.0px Helvetica">Freelance<span =
+class=3D"Apple-tab-span" style=3D"white-space:pre">	</span>Build =
+custom automation bots (content, data, research) for startups on Fiverr =
+/ Upwork.</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica" =
+size=3D"3" style=3D"font: 12.0px Helvetica">Product Launch<span =
+class=3D"Apple-tab-span" style=3D"white-space:pre">	</span>Publish =
+tools on ProductHunt, Gumroad, or GitHub Sponsors.</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica" =
+size=3D"3" style=3D"font: 12.0px Helvetica">API SaaS<span =
+class=3D"Apple-tab-span" style=3D"white-space:pre">	</span>Host your =
+AI agent as a paid API using Render / Railway.</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'">=F0=9F=A7=B0 =
+<b>Business Tools:</b> Stripe, Gumroad, ProductHunt, Notion, Zapier<br>
+=F0=9F=8E=AF <b>Goal:</b> Generate your first $100=E2=80=93500/month by =
+selling automation or micro-SaaS agents.</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px 'Helvetica =
+Neue'; min-height: 15.0px"><br></p>
+<p style=3D"margin: 0.0px 0.0px 2.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"5" style=3D"font: 16.0px 'Helvetica Neue'">=F0=9F=A7=B1<b> =
+Key Repositories Summary</b></font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica" =
+size=3D"3" style=3D"font: 12.0px Helvetica">Category<span =
+class=3D"Apple-tab-span" style=3D"white-space:pre">	=
+</span>Repositories</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica" =
+size=3D"3" style=3D"font: 12.0px Helvetica">Core<span =
+class=3D"Apple-tab-span" style=3D"white-space:pre">	</span><a =
+href=3D"https://github.com/langchain-ai/langchain?utm_source=3Dchatgpt.com=
+">LangChain</a>, LlamaIndex</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica" =
+size=3D"3" style=3D"font: 12.0px Helvetica">Agents<span =
+class=3D"Apple-tab-span" style=3D"white-space:pre">	</span><a =
+href=3D"https://github.com/yoheinakajima/babyagi?utm_source=3Dchatgpt.com"=
+>BabyAGI</a>, <a =
+href=3D"https://github.com/microsoft/autogen?utm_source=3Dchatgpt.com">Aut=
+oGen</a>, <a =
+href=3D"https://github.com/langchain-ai/langgraph">LangGraph</a></font></p=
+>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica" =
+size=3D"3" style=3D"font: 12.0px Helvetica">Memory<span =
+class=3D"Apple-tab-span" style=3D"white-space:pre">	</span><a =
+href=3D"https://github.com/facebookresearch/faiss">FAISS</a>, <a =
+href=3D"https://github.com/chroma-core/chroma">Chroma</a></font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica" =
+size=3D"3" style=3D"font: 12.0px Helvetica">Multi-Agent<span =
+class=3D"Apple-tab-span" style=3D"white-space:pre">	</span><a =
+href=3D"https://github.com/joaomdmoura/crewAI">CrewAI</a>, <a =
+href=3D"https://github.com/camel-ai/camel">CAMEL</a></font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica" =
+size=3D"3" style=3D"font: 12.0px Helvetica">UI + Deployment<span =
+class=3D"Apple-tab-span" style=3D"white-space:pre">	</span><a =
+href=3D"https://github.com/streamlit/streamlit">Streamlit</a>, =
+FastAPI</font></p>
+<p style=3D"margin: 0.0px 0.0px 2.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"5" style=3D"font: 16.0px 'Helvetica Neue'">=F0=9F=92=A1<b> =
+Final Capstone Project Ideas (Monetizable)</b></font></p>
+<ol style=3D"list-style-type: decimal">
+<li style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'"><b>AI Research =
+Assistant SaaS</b> =E2=80=93 Upload papers, summarize, and auto-generate =
+literature reviews.</font></li>
+<li style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'"><b>Social Media =
+Auto-Agent</b> =E2=80=93 Automates content creation, post scheduling, =
+and engagement.</font></li>
+<li style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'"><b>AI Coding =
+Copilot for Startups</b> =E2=80=93 Specialized GPT agent for automating =
+internal scripts &amp; documentation.</font></li>
+</ol>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px 'Helvetica =
+Neue'; min-height: 15.0px"><br></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px 'Helvetica =
+Neue'; min-height: 15.0px"><br></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px 'Helvetica =
+Neue'; min-height: 15.0px"><br></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px 'Helvetica =
+Neue'; min-height: 15.0px"><br></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px 'Helvetica =
+Neue'; min-height: 15.0px"><br></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"5" style=3D"font: 20.0px 'Helvetica Neue'">=F0=9F=9A=80<b> =
+AI Agent Master Roadmap (Beginner =E2=86=92 Advanced =E2=86=92 =
+Earning)</b></font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica =
+Neue'"><b>Duration:</b> 12=E2=80=9316 Weeks<br>
+<b>Time Commitment:</b> 6=E2=80=937 hours/day<br>
+<b>Goal:</b> Go from beginner to project-ready, build multiple =
+LLM-powered autonomous systems, and start earning via freelance, =
+product, or agency work.</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px 'Helvetica =
+Neue'; min-height: 15.0px"><br></p>
+<p style=3D"margin: 0.0px 0.0px 2.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"5" style=3D"font: 16.0px 'Helvetica Neue'">=F0=9F=8E=AF<b> =
+Objectives</b></font></p>
+<ul style=3D"list-style-type: disc">
+<li style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'"><b>Theory:</b> =
+Master core ideas =E2=80=94 LLMs, Planning, Memory, Tool Use, ReAct, =
+Reflexion, RAG, Multi-Agent Systems, Safety.</font></li>
+<li style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica =
+Neue'"><b>Practice:</b> Build AI agents using leading frameworks and =
+open-source repositories.</font></li>
+<li style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'"><b>Tools:</b> =
+LangChain, AutoGen, AG2, BabyAGI, FAISS, ChromaDB, OpenAI APIs, Hugging =
+Face, etc.</font></li>
+<li style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'"><b>Outcome:</b> =
+Create a working <b>GitHub portfolio</b> and <b>start monetizing</b> AI =
+agent skills.</font></li>
+</ul>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px 'Helvetica =
+Neue'; min-height: 15.0px"><br></p>
+<p style=3D"margin: 0.0px 0.0px 2.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"5" style=3D"font: 16.0px 'Helvetica Neue'">=F0=9F=97=93=EF=B8=
+=8F<b> Week-by-Week Plan</b></font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px 'Helvetica =
+Neue'; min-height: 15.0px"><br></p>
+<p style=3D"margin: 0.0px 0.0px 2.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"5" style=3D"font: 16.0px 'Helvetica Neue'">=F0=9F=A7=A9<b> =
+Phase 1: Foundations (Days 1=E2=80=937)</b></font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'">=F0=9F=8E=AF<b> =
+Goal:</b> Understand what AI agents are and how they work.</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'">=F0=9F=93=9A<b> =
+Learn:</b></font></p>
+<ul style=3D"list-style-type: disc">
+<li style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'">Read =
+<b>OpenAI=E2=80=99s =E2=80=9CPractical Guide to Building =
+Agents=E2=80=9D</b><br>
+=E2=86=92 <a =
+href=3D"https://cdn.openai.com/business-guides-and-resources/a-practical-g=
+uide-to-building-agents.pdf?utm_source=3Dchatgpt.com">PDF =
+Link</a></font></li>
+<li style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'">Read <b>Lilian =
+Weng=E2=80=99s Blog:</b> <i>LLM-Powered Autonomous Agents =
+(2023)</i><i></i></font></li>
+<li style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'">Study key =
+ideas:</font></li>
+<ul style=3D"list-style-type: disc">
+<li style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'">Planning =
+=F0=9F=A7=AD</font></li>
+<li style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'">Memory =
+=F0=9F=A7=A0</font></li>
+<li style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'">Tool Use =
+=F0=9F=A7=B0</font></li>
+</ul>
+<li style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'">Learn basic =
+<b>Prompt Engineering</b> and <b>Function Calling (OpenAI/LLM =
+APIs)</b>.</font></li>
+</ul>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'">=F0=9F=A7=A0<b> =
+Practice:</b></font></p>
+<ul style=3D"list-style-type: disc">
+<li style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'">Experiment with =
+OpenAI function calling and simple reasoning loops.</font></li>
+</ul>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'">=F0=9F=93=98<b> =
+GitHub Repos:</b></font></p>
+<ul style=3D"list-style-type: disc">
+<li style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'"><a =
+href=3D"https://github.com/langchain-ai/langchain?utm_source=3Dchatgpt.com=
+">LangChain Core</a></font></li>
+<li style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'"><a =
+href=3D"https://github.com/langchain-ai/agents-from-scratch?utm_source=3Dc=
+hatgpt.com">Agents from Scratch (LangChain Tutorial)</a></font></li>
+</ul>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px 'Helvetica =
+Neue'; min-height: 15.0px"><br></p>
+<p style=3D"margin: 0.0px 0.0px 2.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"5" style=3D"font: 16.0px 'Helvetica Neue'">=F0=9F=A4=96<b> =
+Phase 2: Build Your First Agent (Week 2)</b></font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'">=F0=9F=8E=AF<b> =
+Goal:</b> Build a working single-agent demo.</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'">=F0=9F=93=9A<b> =
+Learn:</b></font></p>
+<ul style=3D"list-style-type: disc">
+<li style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'">Follow =
+LangChain =E2=80=9CAgents-from-Scratch=E2=80=9D notebook.</font></li>
+<li style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'">Understand =
+agent loops: Goal =E2=86=92 Plan =E2=86=92 Act =E2=86=92 =
+Reflect.</font></li>
+</ul>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'">=F0=9F=A7=A0<b> =
+Practice:</b></font></p>
+<ul style=3D"list-style-type: disc">
+<li style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'">Build your =
+<b>Email Summarizer Agent</b> using LangChain Tools.</font></li>
+<li style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'">Run the =
+<b>BabyAGI</b> demo to explore task queue &amp; memory.</font></li>
+</ul>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'">=F0=9F=92=A1<b> =
+Mini Project:</b></font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'"><b>=E2=80=9CEmail=
+ Summarizer &amp; Scheduler Agent=E2=80=9D</b><b></b></font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'">=F0=9F=93=98<b> =
+GitHub:</b></font></p>
+<ul style=3D"list-style-type: disc">
+<li style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'"><a =
+href=3D"https://github.com/yoheinakajima/babyagi?utm_source=3Dchatgpt.com"=
+>BabyAGI</a></font></li>
+<li style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'"><a =
+href=3D"https://github.com/Significant-Gravitas/AutoGPT?utm_source=3Dchatg=
+pt.com">AutoGPT</a></font></li>
+</ul>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px 'Helvetica =
+Neue'; min-height: 15.0px"><br></p>
+<p style=3D"margin: 0.0px 0.0px 2.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"5" style=3D"font: 16.0px 'Helvetica Neue'">=F0=9F=A7=A0<b> =
+Phase 3: Tool Use + Memory (Weeks 3=E2=80=934)</b></font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'">=F0=9F=8E=AF<b> =
+Goal:</b> Enable your agent to remember and use external =
+tools.</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'">=F0=9F=93=9A<b> =
+Learn:</b></font></p>
+<ul style=3D"list-style-type: disc">
+<li style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'">Implement =
+<b>Vector Memory (FAISS / ChromaDB)</b>.</font></li>
+<li style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'">Apply =
+<b>Retrieval-Augmented Generation (RAG)</b>.</font></li>
+<li style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'">Add external =
+APIs (Web search, calculator, Notion, etc.).</font></li>
+</ul>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'">=F0=9F=A7=A0<b> =
+Practice:</b></font></p>
+<ul style=3D"list-style-type: disc">
+<li style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'">Implement =
+memory persistence.</font></li>
+<li style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'">Integrate APIs =
+with LangChain Tools or OpenAI function calling.</font></li>
+</ul>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'">=F0=9F=92=A1<b> =
+Project:</b></font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'"><b>=E2=80=9CResea=
+rch Summarizer Agent with Memory + Search=E2=80=9D</b><b></b></font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'">=F0=9F=93=98<b> =
+GitHub:</b></font></p>
+<ul style=3D"list-style-type: disc">
+<li style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'"><a =
+href=3D"https://github.com/langchain-ai/langchain?utm_source=3Dchatgpt.com=
+">LangChain Memory Examples</a></font></li>
+<li style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'"><a =
+href=3D"https://github.com/chroma-core/chroma">ChromaDB</a></font></li>
+</ul>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px 'Helvetica =
+Neue'; min-height: 15.0px"><br></p>
+<p style=3D"margin: 0.0px 0.0px 2.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"5" style=3D"font: 16.0px 'Helvetica Neue'">=F0=9F=A7=AD<b> =
+Phase 4: Reflection &amp; Planning (Weeks 5=E2=80=937)</b></font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'">=F0=9F=8E=AF<b> =
+Goal:</b> Build smarter, self-correcting agents.</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'">=F0=9F=93=9A<b> =
+Learn:</b></font></p>
+<ul style=3D"list-style-type: disc">
+<li style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'">Study <b>ReAct =
+pattern (Thought =E2=86=92 Action =E2=86=92 =
+Observation)</b>.</font></li>
+<li style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'">Add =
+<b>Reflection step</b> to improve reasoning over iterations.</font></li>
+<li style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'">Learn =
+<b>Chain-of-Hindsight</b> and <b>Reflexion</b> models.</font></li>
+</ul>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'">=F0=9F=A7=A0<b> =
+Practice:</b></font></p>
+<ul style=3D"list-style-type: disc">
+<li style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'">Implement =
+reflection memory that stores errors and lessons.</font></li>
+<li style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'">Test your =
+agent=E2=80=99s ability to self-improve over repeated runs.</font></li>
+</ul>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'">=F0=9F=92=A1<b> =
+Project:</b></font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica =
+Neue'"><b>=E2=80=9CSelf-Improving Q&amp;A Agent=E2=80=9D</b><br>
+(Uses reflection to refine answers over time.)</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'">=F0=9F=93=98<b> =
+GitHub:</b></font></p>
+<ul style=3D"list-style-type: disc">
+<li style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'"><a =
+href=3D"https://github.com/martomor/autogen-agentic-design?utm_source=3Dch=
+atgpt.com">AI Agentic Design Patterns (AutoGen)</a></font></li>
+<li style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'"><a =
+href=3D"https://github.com/ag2ai/ag2?utm_source=3Dchatgpt.com">AG2 =E2=80=93=
+ Open AutoGen Fork</a></font></li>
+</ul>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px 'Helvetica =
+Neue'; min-height: 15.0px"><br></p>
+<p style=3D"margin: 0.0px 0.0px 2.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"5" style=3D"font: 16.0px 'Helvetica Neue'">=F0=9F=A7=91=E2=80=
+=8D=F0=9F=92=BB<b> Phase 5: Multi-Agent Systems (Weeks =
+8=E2=80=9310)</b></font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'">=F0=9F=8E=AF<b> =
+Goal:</b> Build collaborative agents that work as a team.</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'">=F0=9F=93=9A<b> =
+Learn:</b></font></p>
+<ul style=3D"list-style-type: disc">
+<li style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'">Explore =
+<b>AutoGen</b> / <b>AG2</b> for multi-agent collaboration.</font></li>
+<li style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'">Study =
+<b>Planner + Worker</b> and <b>Router + Specialist</b> =
+architectures.</font></li>
+<li style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'">Learn message =
+passing and conversation loops.</font></li>
+</ul>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'">=F0=9F=A7=A0<b> =
+Practice:</b></font></p>
+<ul style=3D"list-style-type: disc">
+<li style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'">Create 3 =
+agents: <b>Researcher, Coder, Writer</b>.</font></li>
+<li style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'">Enable them to =
+pass tasks and verify each other=E2=80=99s output.</font></li>
+</ul>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'">=F0=9F=92=A1<b> =
+Project:</b></font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica =
+Neue'"><b>=E2=80=9CMulti-Agent Startup Assistant=E2=80=9D</b><br>
+(Agents collaborate on product research, design, and =
+content.)</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'">=F0=9F=93=98<b> =
+GitHub:</b></font></p>
+<ul style=3D"list-style-type: disc">
+<li style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'"><a =
+href=3D"https://github.com/microsoft/autogen?utm_source=3Dchatgpt.com">Mic=
+rosoft AutoGen</a></font></li>
+<li style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'"><a =
+href=3D"https://github.com/ag2ai/ag2?utm_source=3Dchatgpt.com">AG2 =
+Community Edition</a></font></li>
+</ul>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px 'Helvetica =
+Neue'; min-height: 15.0px"><br></p>
+<p style=3D"margin: 0.0px 0.0px 2.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"5" style=3D"font: 16.0px 'Helvetica Neue'">=E2=9A=99=EF=B8=8F=
+<b> Phase 6: Evaluation, Safety &amp; Optimization (Weeks =
+11=E2=80=9312)</b></font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'">=F0=9F=8E=AF<b> =
+Goal:</b> Build reliable, ethical, and testable AI agents.</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'">=F0=9F=93=9A<b> =
+Learn:</b></font></p>
+<ul style=3D"list-style-type: disc">
+<li style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'">Safety filters, =
+reward heuristics, and human feedback loops.</font></li>
+<li style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'">Deterministic =
+evaluation metrics for LLM reasoning.</font></li>
+<li style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'">Use smaller =
+models for local tests (Ollama, Llama 3, etc.).</font></li>
+</ul>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'">=F0=9F=A7=A0<b> =
+Practice:</b></font></p>
+<ul style=3D"list-style-type: disc">
+<li style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'">Add evaluation =
+scripts and fail-safe checks.</font></li>
+<li style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'">Create a =
+dashboard to monitor tool calls and memory logs.</font></li>
+</ul>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'">=F0=9F=92=A1<b> =
+Project:</b></font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'"><b>=E2=80=9CAgent=
+ Evaluation &amp; Safety Dashboard=E2=80=9D</b><b></b></font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'">=F0=9F=93=98<b> =
+Resources:</b></font></p>
+<ul style=3D"list-style-type: disc">
+<li style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'">OpenAI guide =
+(Safety section)</font></li>
+<li style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'">LangChain =
+evaluation toolkit</font></li>
+<li style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'">Hugging Face =
+eval frameworks</font></li>
+</ul>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px 'Helvetica =
+Neue'; min-height: 15.0px"><br></p>
+<p style=3D"margin: 0.0px 0.0px 2.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"5" style=3D"font: 16.0px 'Helvetica Neue'">=F0=9F=92=BC<b> =
+Phase 7: Build &amp; Earn (Weeks 13=E2=80=9316)</b></font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'">=F0=9F=8E=AF<b> =
+Goal:</b> Launch your portfolio and monetize your agent =
+skills.</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'">=F0=9F=93=9A<b> =
+Learn:</b></font></p>
+<ul style=3D"list-style-type: disc">
+<li style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'">Package your =
+agents as reusable apps or APIs.</font></li>
+<li style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'">Write technical =
+documentation and case studies.</font></li>
+<li style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'">Learn to deploy =
+with Streamlit, FastAPI, or Vercel.</font></li>
+</ul>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'">=F0=9F=92=B0<b> =
+Monetize:</b></font></p>
+<ul style=3D"list-style-type: disc">
+<li style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'">Freelance =
+platforms: <b>Upwork, Fiverr, Toptal</b><b></b></font></li>
+<li style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'">AI product =
+microservices</font></li>
+<li style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'">Agency / =
+internship opportunities</font></li>
+</ul>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'">=F0=9F=92=A1<b> =
+Final Projects:</b></font></p>
+<ul style=3D"list-style-type: disc">
+<li style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'">=F0=9F=A7=A9 =
+=E2=80=9CMulti-Agent Research Lab=E2=80=9D</font></li>
+<li style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'">=F0=9F=93=84 =
+=E2=80=9CSmart Resume Builder Agent=E2=80=9D</font></li>
+<li style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'">=F0=9F=8E=A5 =
+=E2=80=9CYouTube Script Research &amp; Generation Bot=E2=80=9D</font></li>=
+
+</ul>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px 'Helvetica =
+Neue'; min-height: 15.0px"><br></p>
+<p style=3D"margin: 0.0px 0.0px 2.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"5" style=3D"font: 16.0px 'Helvetica Neue'">=F0=9F=94=97<b> =
+GitHub Learning &amp; Reference Links</b></font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica" =
+size=3D"3" style=3D"font: 12.0px Helvetica">Category<span =
+class=3D"Apple-tab-span" style=3D"white-space:pre">	</span>Repo / =
+Source<span class=3D"Apple-tab-span" style=3D"white-space:pre">	=
+</span>Purpose</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica" =
+size=3D"3" style=3D"font: 12.0px Helvetica">LangChain<span =
+class=3D"Apple-tab-span" style=3D"white-space:pre">	</span><a =
+href=3D"https://github.com/langchain-ai/langchain?utm_source=3Dchatgpt.com=
+">langchain-ai/langchain</a><span class=3D"Apple-tab-span" =
+style=3D"white-space:pre">	</span>Core agent framework</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica" =
+size=3D"3" style=3D"font: 12.0px Helvetica">BabyAGI<span =
+class=3D"Apple-tab-span" style=3D"white-space:pre">	</span><a =
+href=3D"https://github.com/yoheinakajima/babyagi?utm_source=3Dchatgpt.com"=
+>yoheinakajima/babyagi</a><span class=3D"Apple-tab-span" =
+style=3D"white-space:pre">	</span>Minimal task agent</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica" =
+size=3D"3" style=3D"font: 12.0px Helvetica">AutoGPT<span =
+class=3D"Apple-tab-span" style=3D"white-space:pre">	</span><a =
+href=3D"https://github.com/Significant-Gravitas/AutoGPT?utm_source=3Dchatg=
+pt.com">Significant-Gravitas/AutoGPT</a><span class=3D"Apple-tab-span" =
+style=3D"white-space:pre">	</span>End-to-end autonomous =
+agent</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica" =
+size=3D"3" style=3D"font: 12.0px Helvetica">AutoGen<span =
+class=3D"Apple-tab-span" style=3D"white-space:pre">	</span><a =
+href=3D"https://github.com/microsoft/autogen?utm_source=3Dchatgpt.com">mic=
+rosoft/autogen</a><span class=3D"Apple-tab-span" =
+style=3D"white-space:pre">	</span>Multi-agent framework</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica" =
+size=3D"3" style=3D"font: 12.0px Helvetica">AG2<span =
+class=3D"Apple-tab-span" style=3D"white-space:pre">	</span><a =
+href=3D"https://github.com/ag2ai/ag2?utm_source=3Dchatgpt.com">ag2ai/ag2</=
+a><span class=3D"Apple-tab-span" style=3D"white-space:pre">	=
+</span>Open-source AutoGen evolution</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica" =
+size=3D"3" style=3D"font: 12.0px Helvetica">Awesome Agents<span =
+class=3D"Apple-tab-span" style=3D"white-space:pre">	</span><a =
+href=3D"https://github.com/e2b-dev/awesome-ai-agents?utm_source=3Dchatgpt.=
+com">e2b-dev/awesome-ai-agents</a><span class=3D"Apple-tab-span" =
+style=3D"white-space:pre">	</span>Curated AI agent lists</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica" =
+size=3D"3" style=3D"font: 12.0px Helvetica">LangChain =
+Agents-from-Scratch<span class=3D"Apple-tab-span" =
+style=3D"white-space:pre">	</span><a =
+href=3D"https://github.com/langchain-ai/agents-from-scratch?utm_source=3Dc=
+hatgpt.com">langchain-ai/agents-from-scratch</a><span =
+class=3D"Apple-tab-span" style=3D"white-space:pre">	</span>Core =
+tutorial repo</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica" =
+size=3D"3" style=3D"font: 12.0px Helvetica">Agentic Design Patterns<span =
+class=3D"Apple-tab-span" style=3D"white-space:pre">	</span><a =
+href=3D"https://github.com/martomor/autogen-agentic-design?utm_source=3Dch=
+atgpt.com">martomor/autogen-agentic-design</a><span =
+class=3D"Apple-tab-span" style=3D"white-space:pre">	</span>Design =
+patterns in AutoGen</font></p>
+<p style=3D"margin: 0.0px 0.0px 2.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"5" style=3D"font: 16.0px 'Helvetica Neue'">=F0=9F=A7=B0<b> =
+Recommended Tool Stack</b></font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica" =
+size=3D"3" style=3D"font: 12.0px Helvetica">Category<span =
+class=3D"Apple-tab-span" style=3D"white-space:pre">	</span>Tool<span =
+class=3D"Apple-tab-span" style=3D"white-space:pre">	=
+</span>Description</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica" =
+size=3D"3" style=3D"font: 12.0px Helvetica">LLM APIs<span =
+class=3D"Apple-tab-span" style=3D"white-space:pre">	</span>OpenAI =
+GPT-4o / Claude / Gemini<span class=3D"Apple-tab-span" =
+style=3D"white-space:pre">	</span>Core reasoning models</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica" =
+size=3D"3" style=3D"font: 12.0px Helvetica">Framework<span =
+class=3D"Apple-tab-span" style=3D"white-space:pre">	</span>LangChain =
+/ AutoGen / AG2<span class=3D"Apple-tab-span" style=3D"white-space:pre">	=
+</span>Agent orchestration</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica" =
+size=3D"3" style=3D"font: 12.0px Helvetica">Memory<span =
+class=3D"Apple-tab-span" style=3D"white-space:pre">	</span>FAISS / =
+Chroma / Milvus<span class=3D"Apple-tab-span" style=3D"white-space:pre">	=
+</span>Vector databases</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica" =
+size=3D"3" style=3D"font: 12.0px Helvetica">Evaluation<span =
+class=3D"Apple-tab-span" style=3D"white-space:pre">	</span>Hugging =
+Face / LangSmith<span class=3D"Apple-tab-span" style=3D"white-space:pre">	=
+</span>Testing &amp; monitoring</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica" =
+size=3D"3" style=3D"font: 12.0px Helvetica">Deployment<span =
+class=3D"Apple-tab-span" style=3D"white-space:pre">	</span>Streamlit =
+/ FastAPI / Docker<span class=3D"Apple-tab-span" =
+style=3D"white-space:pre">	</span>Web &amp; API =
+deployment</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica" =
+size=3D"3" style=3D"font: 12.0px Helvetica">DevOps<span =
+class=3D"Apple-tab-span" style=3D"white-space:pre">	</span>Git / =
+VSCode / Python venv<span class=3D"Apple-tab-span" =
+style=3D"white-space:pre">	</span>Setup tools</font></p>
+<p style=3D"margin: 0.0px 0.0px 2.0px 0.0px; font: 16.0px 'Helvetica =
+Neue'; min-height: 19.0px"><b></b><br></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px 'Helvetica =
+Neue'; min-height: 16.0px"><b></b><br></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px 'Helvetica =
+Neue'; min-height: 16.0px"><b></b><br></p>
+<p style=3D"margin: 0.0px 0.0px 2.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"5" style=3D"font: 16.0px 'Helvetica Neue'">=F0=9F=9A=80<b> =
+16-Week AI Agent Development Roadmap</b></font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'"><b>Goal:</b> =
+Master AI Agent systems (LLM-powered), build real projects, and start =
+earning via freelance, SaaS, or client automation tools.<br>
+<b>Daily Study: ~6=E2=80=937 hrs/day</b><b></b></font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'">=F0=9F=A7=A0 =
+1.5h Theory &amp; Reading=E2=80=83=E2=9A=99=EF=B8=8F 1.5h Tools=E2=80=83=F0=
+=9F=92=BB 2h Coding=E2=80=83=F0=9F=A7=A9 2h Project</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px 'Helvetica =
+Neue'; min-height: 15.0px"><br></p>
+<p style=3D"margin: 0.0px 0.0px 2.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"5" style=3D"font: 16.0px 'Helvetica Neue'">=F0=9F=A7=A9<b> =
+Phase 1 =E2=80=93 Foundations (Week 1=E2=80=932)</b></font></p>
+<p style=3D"margin: 0.0px 0.0px 2.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"5" style=3D"font: 16.0px 'Helvetica Neue'">=F0=9F=8E=AF<b> =
+Goal: Understand what AI Agents are &amp; how LLMs reason, plan, and =
+act.</b></font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica" =
+size=3D"3" style=3D"font: 12.0px Helvetica">Focus<span =
+class=3D"Apple-tab-span" style=3D"white-space:pre">	=
+</span>Topics<span class=3D"Apple-tab-span" style=3D"white-space:pre">	=
+</span>Tools<span class=3D"Apple-tab-span" style=3D"white-space:pre">	=
+</span>Projects<span class=3D"Apple-tab-span" style=3D"white-space:pre">	=
+</span>Outcome</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica =
+Neue'">=F0=9F=A7=A0</font><font face=3D"Apple Color Emoji" size=3D"3" =
+style=3D"font: 12.0px 'Apple Color Emoji'"> </font><font =
+face=3D"Helvetica" size=3D"3" style=3D"font: 12.0px Helvetica">Theory =
+(1.5h/day)<span class=3D"Apple-tab-span" style=3D"white-space:pre">	=
+</span>=E2=80=A2 What is an AI Agent</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica" =
+size=3D"3" style=3D"font: 12.0px Helvetica">=E2=80=A2 LLM reasoning =
+&amp; Chain-of-Thought</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica" =
+size=3D"3" style=3D"font: 12.0px Helvetica">=E2=80=A2 ReAct pattern =
+&amp; architecture</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica" =
+size=3D"3" style=3D"font: 12.0px Helvetica">=E2=80=A2 Planning, Memory, =
+Tool Use overview</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica" =
+size=3D"3" style=3D"font: 12.0px Helvetica">=E2=80=A2 Lilian Weng=E2=80=99=
+s =E2=80=9CLLM-Powered Agents=E2=80=9D blog</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica" =
+size=3D"3" style=3D"font: 12.0px Helvetica">=E2=80=A2 OpenAI=E2=80=99s =
+=E2=80=9CPractical Guide to Building Agents=E2=80=9D<span =
+class=3D"Apple-tab-span" style=3D"white-space:pre">	</span>=E2=80=94<s=
+pan class=3D"Apple-tab-span" style=3D"white-space:pre">	</span>=E2=80=94<s=
+pan class=3D"Apple-tab-span" style=3D"white-space:pre">	</span>Clear =
+conceptual model of AI Agent lifecycle</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica =
+Neue'">=E2=9A=99=EF=B8=8F</font><font face=3D"Apple Color Emoji" =
+size=3D"3" style=3D"font: 12.0px 'Apple Color Emoji'"> </font><font =
+face=3D"Helvetica" size=3D"3" style=3D"font: 12.0px Helvetica">Tools =
+(1.5h/day)<span class=3D"Apple-tab-span" style=3D"white-space:pre">	=
+</span>=E2=80=A2 Python setup</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica" =
+size=3D"3" style=3D"font: 12.0px Helvetica">=E2=80=A2 OpenAI API =
+basics</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica" =
+size=3D"3" style=3D"font: 12.0px Helvetica">=E2=80=A2 LangChain install =
++ quickstart</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica" =
+size=3D"3" style=3D"font: 12.0px Helvetica">=E2=80=A2 Jupyter, GitHub =
+setup<span class=3D"Apple-tab-span" style=3D"white-space:pre">	=
+</span>Python, LangChain, OpenAI API<span class=3D"Apple-tab-span" =
+style=3D"white-space:pre">	</span>=E2=80=94<span =
+class=3D"Apple-tab-span" style=3D"white-space:pre">	</span>Working =
+environment ready</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica =
+Neue'">=F0=9F=92=BB</font><font face=3D"Apple Color Emoji" size=3D"3" =
+style=3D"font: 12.0px 'Apple Color Emoji'"> </font><font =
+face=3D"Helvetica" size=3D"3" style=3D"font: 12.0px Helvetica">Coding =
+(2h/day)<span class=3D"Apple-tab-span" style=3D"white-space:pre">	=
+</span>=E2=80=A2 LangChain =E2=80=9CAgents-from-Scratch=E2=80=9D =
+tutorial</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica" =
+size=3D"3" style=3D"font: 12.0px Helvetica">=E2=80=A2 Simple prompt =
+chaining</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica" =
+size=3D"3" style=3D"font: 12.0px Helvetica">=E2=80=A2 Function calling =
+example<span class=3D"Apple-tab-span" style=3D"white-space:pre">	=
+</span>LangChain Core<span class=3D"Apple-tab-span" =
+style=3D"white-space:pre">	</span>=E2=80=94<span =
+class=3D"Apple-tab-span" style=3D"white-space:pre">	=
+</span>Build-first familiarity</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica =
+Neue'">=F0=9F=A7=A9</font><font face=3D"Apple Color Emoji" size=3D"3" =
+style=3D"font: 12.0px 'Apple Color Emoji'"> </font><font =
+face=3D"Helvetica" size=3D"3" style=3D"font: 12.0px Helvetica">Project =
+(2h/day)<span class=3D"Apple-tab-span" style=3D"white-space:pre">	=
+</span>Mini Project: Simple ChatGPT-style assistant using LangChain<span =
+class=3D"Apple-tab-span" style=3D"white-space:pre">	=
+</span>LangChain<span class=3D"Apple-tab-span" style=3D"white-space:pre">	=
+</span>Personal Chat Agent<span class=3D"Apple-tab-span" =
+style=3D"white-space:pre">	</span>Run basic single-agent =
+workflow</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'">=F0=9F=95=92 =
+<b>Weekly Total:</b> 42=E2=80=9345 hrs<br>
+=E2=9C=85 <b>Skill Outcome:</b> Can explain + prototype a simple LLM =
+agent.</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px 'Helvetica =
+Neue'; min-height: 15.0px"><br></p>
+<p style=3D"margin: 0.0px 0.0px 2.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"5" style=3D"font: 16.0px 'Helvetica Neue'">=F0=9F=A4=96<b> =
+Phase 2 =E2=80=93 Core Agent Development (Week 3=E2=80=934)</b></font></p>=
+
+<p style=3D"margin: 0.0px 0.0px 2.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"5" style=3D"font: 16.0px 'Helvetica Neue'">=F0=9F=8E=AF<b> =
+Goal: Implement tool use, task loops &amp; short-term =
+memory.</b></font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica" =
+size=3D"3" style=3D"font: 12.0px Helvetica">Focus<span =
+class=3D"Apple-tab-span" style=3D"white-space:pre">	=
+</span>Topics<span class=3D"Apple-tab-span" style=3D"white-space:pre">	=
+</span>Tools<span class=3D"Apple-tab-span" style=3D"white-space:pre">	=
+</span>Projects<span class=3D"Apple-tab-span" style=3D"white-space:pre">	=
+</span>Outcome</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica =
+Neue'">=F0=9F=A7=A0</font><font face=3D"Apple Color Emoji" size=3D"3" =
+style=3D"font: 12.0px 'Apple Color Emoji'"> </font><font =
+face=3D"Helvetica" size=3D"3" style=3D"font: 12.0px =
+Helvetica">Theory<span class=3D"Apple-tab-span" style=3D"white-space:pre">=
+	</span>=E2=80=A2 Agent loops &amp; task decomposition</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica" =
+size=3D"3" style=3D"font: 12.0px Helvetica">=E2=80=A2 BabyAGI =
+architecture</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica" =
+size=3D"3" style=3D"font: 12.0px Helvetica">=E2=80=A2 Role of memory in =
+autonomous loops<span class=3D"Apple-tab-span" style=3D"white-space:pre">	=
+</span>=E2=80=94<span class=3D"Apple-tab-span" style=3D"white-space:pre">	=
+</span>=E2=80=94<span class=3D"Apple-tab-span" style=3D"white-space:pre">	=
+</span>Understand iterative reasoning loops</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica =
+Neue'">=E2=9A=99=EF=B8=8F</font><font face=3D"Apple Color Emoji" =
+size=3D"3" style=3D"font: 12.0px 'Apple Color Emoji'"> </font><font =
+face=3D"Helvetica" size=3D"3" style=3D"font: 12.0px =
+Helvetica">Tools<span class=3D"Apple-tab-span" style=3D"white-space:pre">	=
+</span>=E2=80=A2 LangChain AgentExecutor</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica" =
+size=3D"3" style=3D"font: 12.0px Helvetica">=E2=80=A2 BabyAGI =
+setup</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica" =
+size=3D"3" style=3D"font: 12.0px Helvetica">=E2=80=A2 Environment =
+variables, OpenAI keys<span class=3D"Apple-tab-span" =
+style=3D"white-space:pre">	</span>LangChain, BabyAGI<span =
+class=3D"Apple-tab-span" style=3D"white-space:pre">	</span>=E2=80=94<s=
+pan class=3D"Apple-tab-span" style=3D"white-space:pre">	</span>Can run =
+and modify agent notebooks</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica =
+Neue'">=F0=9F=92=BB</font><font face=3D"Apple Color Emoji" size=3D"3" =
+style=3D"font: 12.0px 'Apple Color Emoji'"> </font><font =
+face=3D"Helvetica" size=3D"3" style=3D"font: 12.0px =
+Helvetica">Coding<span class=3D"Apple-tab-span" style=3D"white-space:pre">=
+	</span>=E2=80=A2 Implement =E2=80=9CAgents-from-Scratch=E2=80=9D =
+notebook</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica" =
+size=3D"3" style=3D"font: 12.0px Helvetica">=E2=80=A2 Build =
+chain-of-thought agent<span class=3D"Apple-tab-span" =
+style=3D"white-space:pre">	</span>LangChain<span =
+class=3D"Apple-tab-span" style=3D"white-space:pre">	</span>=E2=80=94<s=
+pan class=3D"Apple-tab-span" style=3D"white-space:pre">	</span>Reusable =
+base template</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica =
+Neue'">=F0=9F=A7=A9</font><font face=3D"Apple Color Emoji" size=3D"3" =
+style=3D"font: 12.0px 'Apple Color Emoji'"> </font><font =
+face=3D"Helvetica" size=3D"3" style=3D"font: 12.0px =
+Helvetica">Project<span class=3D"Apple-tab-span" =
+style=3D"white-space:pre">	</span>Mini Project: =E2=80=9CEmail =
+summarizer &amp; scheduler agent=E2=80=9D<span class=3D"Apple-tab-span" =
+style=3D"white-space:pre">	</span>LangChain, BabyAGI<span =
+class=3D"Apple-tab-span" style=3D"white-space:pre">	</span>Email =
+Assistant Agent<span class=3D"Apple-tab-span" style=3D"white-space:pre">	=
+</span>Fully functional tool-using agent</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'">=F0=9F=93=98 =
+<b>GitHub:</b><b></b></font></p>
+<ul style=3D"list-style-type: disc">
+<li style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'"><a =
+href=3D"https://github.com/langchain-ai/agents-from-scratch?utm_source=3Dc=
+hatgpt.com">LangChain Agents-from-Scratch</a></font></li>
+<li style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'"><a =
+href=3D"https://github.com/yoheinakajima/babyagi?utm_source=3Dchatgpt.com"=
+>BabyAGI</a></font></li>
+<li style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'"><a =
+href=3D"https://github.com/Significant-Gravitas/AutoGPT?utm_source=3Dchatg=
+pt.com">AutoGPT</a></font></li>
+</ul>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'">=F0=9F=95=92 =
+<b>Weekly Total:</b> 84 hrs (2 weeks)<br>
+=E2=9C=85 <b>Skill Outcome:</b> Build &amp; debug self-running =
+agents.</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px 'Helvetica =
+Neue'; min-height: 15.0px"><br></p>
+<p style=3D"margin: 0.0px 0.0px 2.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"5" style=3D"font: 16.0px 'Helvetica Neue'">=F0=9F=A7=A0<b> =
+Phase 3 =E2=80=93 Tool Use + Memory (Week 5=E2=80=936)</b></font></p>
+<p style=3D"margin: 0.0px 0.0px 2.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"5" style=3D"font: 16.0px 'Helvetica Neue'">=F0=9F=8E=AF<b> =
+Goal: Add knowledge retrieval (RAG) + long-term memory.</b></font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica" =
+size=3D"3" style=3D"font: 12.0px Helvetica">Focus<span =
+class=3D"Apple-tab-span" style=3D"white-space:pre">	=
+</span>Topics<span class=3D"Apple-tab-span" style=3D"white-space:pre">	=
+</span>Tools<span class=3D"Apple-tab-span" style=3D"white-space:pre">	=
+</span>Projects<span class=3D"Apple-tab-span" style=3D"white-space:pre">	=
+</span>Outcome</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica =
+Neue'">=F0=9F=A7=A0</font><font face=3D"Apple Color Emoji" size=3D"3" =
+style=3D"font: 12.0px 'Apple Color Emoji'"> </font><font =
+face=3D"Helvetica" size=3D"3" style=3D"font: 12.0px =
+Helvetica">Theory<span class=3D"Apple-tab-span" style=3D"white-space:pre">=
+	</span>=E2=80=A2 Embeddings, vector databases</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica" =
+size=3D"3" style=3D"font: 12.0px Helvetica">=E2=80=A2 RAG =
+(Retrieval-Augmented Generation)</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica" =
+size=3D"3" style=3D"font: 12.0px Helvetica">=E2=80=A2 Context windows =
+&amp; prompt injection<span class=3D"Apple-tab-span" =
+style=3D"white-space:pre">	</span>=E2=80=94<span =
+class=3D"Apple-tab-span" style=3D"white-space:pre">	</span>=E2=80=94<s=
+pan class=3D"Apple-tab-span" style=3D"white-space:pre">	=
+</span>Understand how agents =E2=80=9Cremember=E2=80=9D</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica =
+Neue'">=E2=9A=99=EF=B8=8F</font><font face=3D"Apple Color Emoji" =
+size=3D"3" style=3D"font: 12.0px 'Apple Color Emoji'"> </font><font =
+face=3D"Helvetica" size=3D"3" style=3D"font: 12.0px =
+Helvetica">Tools<span class=3D"Apple-tab-span" style=3D"white-space:pre">	=
+</span>=E2=80=A2 FAISS, ChromaDB setup</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica" =
+size=3D"3" style=3D"font: 12.0px Helvetica">=E2=80=A2 LangChain memory =
+modules</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica" =
+size=3D"3" style=3D"font: 12.0px Helvetica">=E2=80=A2 Hugging Face =
+embeddings<span class=3D"Apple-tab-span" style=3D"white-space:pre">	=
+</span>FAISS, Chroma, LangChain<span class=3D"Apple-tab-span" =
+style=3D"white-space:pre">	</span>=E2=80=94<span =
+class=3D"Apple-tab-span" style=3D"white-space:pre">	</span>Manage =
+vector stores</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica =
+Neue'">=F0=9F=92=BB</font><font face=3D"Apple Color Emoji" size=3D"3" =
+style=3D"font: 12.0px 'Apple Color Emoji'"> </font><font =
+face=3D"Helvetica" size=3D"3" style=3D"font: 12.0px =
+Helvetica">Coding<span class=3D"Apple-tab-span" style=3D"white-space:pre">=
+	</span>=E2=80=A2 Implement retrieval chain</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica" =
+size=3D"3" style=3D"font: 12.0px Helvetica">=E2=80=A2 Add custom tools: =
+Web search, file reader<span class=3D"Apple-tab-span" =
+style=3D"white-space:pre">	</span>LangChain, OpenAI API<span =
+class=3D"Apple-tab-span" style=3D"white-space:pre">	</span>=E2=80=94<s=
+pan class=3D"Apple-tab-span" style=3D"white-space:pre">	</span>Working =
+memory system</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica =
+Neue'">=F0=9F=A7=A9</font><font face=3D"Apple Color Emoji" size=3D"3" =
+style=3D"font: 12.0px 'Apple Color Emoji'"> </font><font =
+face=3D"Helvetica" size=3D"3" style=3D"font: 12.0px =
+Helvetica">Project<span class=3D"Apple-tab-span" =
+style=3D"white-space:pre">	</span>Project: =E2=80=9CResearch =
+Summarizer Agent=E2=80=9D with search + memory<span =
+class=3D"Apple-tab-span" style=3D"white-space:pre">	</span>LangChain =
++ FAISS<span class=3D"Apple-tab-span" style=3D"white-space:pre">	=
+</span>Research Assistant<span class=3D"Apple-tab-span" =
+style=3D"white-space:pre">	</span>Reads, stores, and recalls =
+documents</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'">=F0=9F=93=98 =
+<b>GitHub:</b><b></b></font></p>
+<ul style=3D"list-style-type: disc">
+<li style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'"><a =
+href=3D"https://github.com/langchain-ai/langchain?utm_source=3Dchatgpt.com=
+">LangChain Memory Examples</a></font></li>
+<li style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'"><a =
+href=3D"https://github.com/chroma-core/chroma">ChromaDB</a></font></li>
+</ul>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'">=F0=9F=95=92 =
+<b>Weekly Total:</b> ~84 hrs (2 weeks)<br>
+=E2=9C=85 <b>Skill Outcome:</b> Implement long-term memory + =
+retrieval.</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px 'Helvetica =
+Neue'; min-height: 15.0px"><br></p>
+<p style=3D"margin: 0.0px 0.0px 2.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"5" style=3D"font: 16.0px 'Helvetica Neue'">=F0=9F=A7=AD<b> =
+Phase 4 =E2=80=93 Reflection &amp; Planning (Week 7=E2=80=938)</b></font><=
+/p>
+<p style=3D"margin: 0.0px 0.0px 2.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"5" style=3D"font: 16.0px 'Helvetica Neue'">=F0=9F=8E=AF<b> =
+Goal: Implement reasoning, self-evaluation, and =
+reflexion.</b></font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica" =
+size=3D"3" style=3D"font: 12.0px Helvetica">Focus<span =
+class=3D"Apple-tab-span" style=3D"white-space:pre">	=
+</span>Topics<span class=3D"Apple-tab-span" style=3D"white-space:pre">	=
+</span>Tools<span class=3D"Apple-tab-span" style=3D"white-space:pre">	=
+</span>Projects<span class=3D"Apple-tab-span" style=3D"white-space:pre">	=
+</span>Outcome</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica =
+Neue'">=F0=9F=A7=A0</font><font face=3D"Apple Color Emoji" size=3D"3" =
+style=3D"font: 12.0px 'Apple Color Emoji'"> </font><font =
+face=3D"Helvetica" size=3D"3" style=3D"font: 12.0px =
+Helvetica">Theory<span class=3D"Apple-tab-span" style=3D"white-space:pre">=
+	</span>=E2=80=A2 ReAct pattern (Thought </font><font =
+face=3D"Lucida Grande" size=3D"3" style=3D"font: 12.0px 'Lucida =
+Grande'">=E2=86=92 Action =E2=86=92 Observation)</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica" =
+size=3D"3" style=3D"font: 12.0px Helvetica">=E2=80=A2 Reflexion, =
+Chain-of-Hindsight</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica" =
+size=3D"3" style=3D"font: 12.0px Helvetica">=E2=80=A2 Evaluation =
+heuristics<span class=3D"Apple-tab-span" style=3D"white-space:pre">	=
+</span>=E2=80=94<span class=3D"Apple-tab-span" style=3D"white-space:pre">	=
+</span>=E2=80=94<span class=3D"Apple-tab-span" style=3D"white-space:pre">	=
+</span>Understand self-improving logic</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica =
+Neue'">=E2=9A=99=EF=B8=8F</font><font face=3D"Apple Color Emoji" =
+size=3D"3" style=3D"font: 12.0px 'Apple Color Emoji'"> </font><font =
+face=3D"Helvetica" size=3D"3" style=3D"font: 12.0px =
+Helvetica">Tools<span class=3D"Apple-tab-span" style=3D"white-space:pre">	=
+</span>=E2=80=A2 Prompt logging, agent feedback loop</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica" =
+size=3D"3" style=3D"font: 12.0px Helvetica">=E2=80=A2 ReAct =
+templates<span class=3D"Apple-tab-span" style=3D"white-space:pre">	=
+</span>LangChain, AutoGen<span class=3D"Apple-tab-span" =
+style=3D"white-space:pre">	</span>=E2=80=94<span =
+class=3D"Apple-tab-span" style=3D"white-space:pre">	</span>Framework =
+for reflection</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica =
+Neue'">=F0=9F=92=BB</font><font face=3D"Apple Color Emoji" size=3D"3" =
+style=3D"font: 12.0px 'Apple Color Emoji'"> </font><font =
+face=3D"Helvetica" size=3D"3" style=3D"font: 12.0px =
+Helvetica">Coding<span class=3D"Apple-tab-span" style=3D"white-space:pre">=
+	</span>=E2=80=A2 ReAct-style reasoning loops</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica" =
+size=3D"3" style=3D"font: 12.0px Helvetica">=E2=80=A2 Chain-of-hindsight =
+evaluation<span class=3D"Apple-tab-span" style=3D"white-space:pre">	=
+</span>LangChain, OpenAI<span class=3D"Apple-tab-span" =
+style=3D"white-space:pre">	</span>=E2=80=94<span =
+class=3D"Apple-tab-span" style=3D"white-space:pre">	</span>Smart =
+agent reasoning</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica =
+Neue'">=F0=9F=A7=A9</font><font face=3D"Apple Color Emoji" size=3D"3" =
+style=3D"font: 12.0px 'Apple Color Emoji'"> </font><font =
+face=3D"Helvetica" size=3D"3" style=3D"font: 12.0px =
+Helvetica">Project<span class=3D"Apple-tab-span" =
+style=3D"white-space:pre">	</span>Project: =E2=80=9CSelf-Improving =
+Q&amp;A Agent=E2=80=9D<span class=3D"Apple-tab-span" =
+style=3D"white-space:pre">	</span>LangChain, AutoGen<span =
+class=3D"Apple-tab-span" style=3D"white-space:pre">	</span>Reflexive =
+Agent<span class=3D"Apple-tab-span" style=3D"white-space:pre">	=
+</span>Evaluates and improves answers</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'">=F0=9F=93=98 =
+<b>GitHub:</b><b></b></font></p>
+<ul style=3D"list-style-type: disc">
+<li style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'"><a =
+href=3D"https://github.com/martomor/autogen-agentic-design?utm_source=3Dch=
+atgpt.com">AI Agentic Design Patterns (AutoGen)</a></font></li>
+<li style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'"><a =
+href=3D"https://github.com/ag2ai/ag2?utm_source=3Dchatgpt.com">AG2 (open =
+AutoGen fork)</a></font></li>
+</ul>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'">=F0=9F=95=92 =
+<b>Weekly Total:</b> ~84 hrs (2 weeks)<br>
+=E2=9C=85 <b>Skill Outcome:</b> Build agents that reason, plan, and =
+reflect.</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px 'Helvetica =
+Neue'; min-height: 15.0px"><br></p>
+<p style=3D"margin: 0.0px 0.0px 2.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"5" style=3D"font: 16.0px 'Helvetica Neue'">=F0=9F=A7=91=E2=80=
+=8D=F0=9F=92=BB<b> Phase 5 =E2=80=93 Multi-Agent Systems (Week =
+9=E2=80=9311)</b></font></p>
+<p style=3D"margin: 0.0px 0.0px 2.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"5" style=3D"font: 16.0px 'Helvetica Neue'">=F0=9F=8E=AF<b> =
+Goal: Build multi-role agents that collaborate =
+intelligently.</b></font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica" =
+size=3D"3" style=3D"font: 12.0px Helvetica">Focus<span =
+class=3D"Apple-tab-span" style=3D"white-space:pre">	=
+</span>Topics<span class=3D"Apple-tab-span" style=3D"white-space:pre">	=
+</span>Tools<span class=3D"Apple-tab-span" style=3D"white-space:pre">	=
+</span>Projects<span class=3D"Apple-tab-span" style=3D"white-space:pre">	=
+</span>Outcome</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica =
+Neue'">=F0=9F=A7=A0</font><font face=3D"Apple Color Emoji" size=3D"3" =
+style=3D"font: 12.0px 'Apple Color Emoji'"> </font><font =
+face=3D"Helvetica" size=3D"3" style=3D"font: 12.0px =
+Helvetica">Theory<span class=3D"Apple-tab-span" style=3D"white-space:pre">=
+	</span>=E2=80=A2 Multi-agent communication &amp; =
+routing</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica" =
+size=3D"3" style=3D"font: 12.0px Helvetica">=E2=80=A2 Specialist vs. =
+Generalist agents</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica" =
+size=3D"3" style=3D"font: 12.0px Helvetica">=E2=80=A2 Controllers, =
+message passing<span class=3D"Apple-tab-span" style=3D"white-space:pre">	=
+</span>=E2=80=94<span class=3D"Apple-tab-span" style=3D"white-space:pre">	=
+</span>=E2=80=94<span class=3D"Apple-tab-span" style=3D"white-space:pre">	=
+</span>Learn cooperative intelligence</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica =
+Neue'">=E2=9A=99=EF=B8=8F</font><font face=3D"Apple Color Emoji" =
+size=3D"3" style=3D"font: 12.0px 'Apple Color Emoji'"> </font><font =
+face=3D"Helvetica" size=3D"3" style=3D"font: 12.0px =
+Helvetica">Tools<span class=3D"Apple-tab-span" style=3D"white-space:pre">	=
+</span>=E2=80=A2 AutoGen / AG2 multi-agent APIs</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica" =
+size=3D"3" style=3D"font: 12.0px Helvetica">=E2=80=A2 LangGraph &amp; =
+CrewAI overview<span class=3D"Apple-tab-span" style=3D"white-space:pre">	=
+</span>AutoGen, AG2, LangGraph<span class=3D"Apple-tab-span" =
+style=3D"white-space:pre">	</span>=E2=80=94<span =
+class=3D"Apple-tab-span" style=3D"white-space:pre">	</span>Control =
+multi-agent orchestration</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica =
+Neue'">=F0=9F=92=BB</font><font face=3D"Apple Color Emoji" size=3D"3" =
+style=3D"font: 12.0px 'Apple Color Emoji'"> </font><font =
+face=3D"Helvetica" size=3D"3" style=3D"font: 12.0px =
+Helvetica">Coding<span class=3D"Apple-tab-span" style=3D"white-space:pre">=
+	</span>=E2=80=A2 Build Planner + Worker + Reviewer pipeline<span =
+class=3D"Apple-tab-span" style=3D"white-space:pre">	=
+</span>AutoGen<span class=3D"Apple-tab-span" style=3D"white-space:pre">	=
+</span>=E2=80=94<span class=3D"Apple-tab-span" style=3D"white-space:pre">	=
+</span>Parallel reasoning</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica =
+Neue'">=F0=9F=A7=A9</font><font face=3D"Apple Color Emoji" size=3D"3" =
+style=3D"font: 12.0px 'Apple Color Emoji'"> </font><font =
+face=3D"Helvetica" size=3D"3" style=3D"font: 12.0px =
+Helvetica">Project<span class=3D"Apple-tab-span" =
+style=3D"white-space:pre">	</span>Project: =E2=80=9CAI Startup =
+Assistant=E2=80=9D (researcher, coder, writer)<span =
+class=3D"Apple-tab-span" style=3D"white-space:pre">	</span>AutoGen, =
+AG2<span class=3D"Apple-tab-span" style=3D"white-space:pre">	=
+</span>Multi-Agent System<span class=3D"Apple-tab-span" =
+style=3D"white-space:pre">	</span>End-to-end =
+collaboration</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'">=F0=9F=93=98 =
+<b>GitHub:</b><b></b></font></p>
+<ul style=3D"list-style-type: disc">
+<li style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'"><a =
+href=3D"https://github.com/microsoft/autogen?utm_source=3Dchatgpt.com">Mic=
+rosoft AutoGen</a></font></li>
+<li style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'"><a =
+href=3D"https://github.com/ag2ai/ag2?utm_source=3Dchatgpt.com">AG2 =
+Community Version</a></font></li>
+</ul>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'">=F0=9F=95=92 =
+<b>Weekly Total:</b> ~126 hrs (3 weeks)<br>
+=E2=9C=85 <b>Skill Outcome:</b> Multi-agent collaboration =
+systems.</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px 'Helvetica =
+Neue'; min-height: 15.0px"><br></p>
+<p style=3D"margin: 0.0px 0.0px 2.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"5" style=3D"font: 16.0px 'Helvetica Neue'">=E2=9A=99=EF=B8=8F=
+<b> Phase 6 =E2=80=93 Evaluation, Safety &amp; Optimization (Week =
+12=E2=80=9313)</b></font></p>
+<p style=3D"margin: 0.0px 0.0px 2.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"5" style=3D"font: 16.0px 'Helvetica Neue'">=F0=9F=8E=AF<b> =
+Goal: Build safe, testable, and ethical agents.</b></font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica" =
+size=3D"3" style=3D"font: 12.0px Helvetica">Focus<span =
+class=3D"Apple-tab-span" style=3D"white-space:pre">	=
+</span>Topics<span class=3D"Apple-tab-span" style=3D"white-space:pre">	=
+</span>Tools<span class=3D"Apple-tab-span" style=3D"white-space:pre">	=
+</span>Projects<span class=3D"Apple-tab-span" style=3D"white-space:pre">	=
+</span>Outcome</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica =
+Neue'">=F0=9F=A7=A0</font><font face=3D"Apple Color Emoji" size=3D"3" =
+style=3D"font: 12.0px 'Apple Color Emoji'"> </font><font =
+face=3D"Helvetica" size=3D"3" style=3D"font: 12.0px =
+Helvetica">Theory<span class=3D"Apple-tab-span" style=3D"white-space:pre">=
+	</span>=E2=80=A2 Hallucination &amp; bias control</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica" =
+size=3D"3" style=3D"font: 12.0px Helvetica">=E2=80=A2 Human-in-loop =
+design</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica" =
+size=3D"3" style=3D"font: 12.0px Helvetica">=E2=80=A2 Reward =
+heuristics<span class=3D"Apple-tab-span" style=3D"white-space:pre">	=
+</span>=E2=80=94<span class=3D"Apple-tab-span" style=3D"white-space:pre">	=
+</span>=E2=80=94<span class=3D"Apple-tab-span" style=3D"white-space:pre">	=
+</span>Understand safe deployment</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica =
+Neue'">=E2=9A=99=EF=B8=8F</font><font face=3D"Apple Color Emoji" =
+size=3D"3" style=3D"font: 12.0px 'Apple Color Emoji'"> </font><font =
+face=3D"Helvetica" size=3D"3" style=3D"font: 12.0px =
+Helvetica">Tools<span class=3D"Apple-tab-span" style=3D"white-space:pre">	=
+</span>=E2=80=A2 LangChain Eval toolkit</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica" =
+size=3D"3" style=3D"font: 12.0px Helvetica">=E2=80=A2 Hugging Face =
+evaluation</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica" =
+size=3D"3" style=3D"font: 12.0px Helvetica">=E2=80=A2 Logging &amp; =
+monitoring<span class=3D"Apple-tab-span" style=3D"white-space:pre">	=
+</span>LangChain Eval, HF<span class=3D"Apple-tab-span" =
+style=3D"white-space:pre">	</span>=E2=80=94<span =
+class=3D"Apple-tab-span" style=3D"white-space:pre">	=
+</span>Measurable outputs</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica =
+Neue'">=F0=9F=92=BB</font><font face=3D"Apple Color Emoji" size=3D"3" =
+style=3D"font: 12.0px 'Apple Color Emoji'"> </font><font =
+face=3D"Helvetica" size=3D"3" style=3D"font: 12.0px =
+Helvetica">Coding<span class=3D"Apple-tab-span" style=3D"white-space:pre">=
+	</span>=E2=80=A2 Add unit tests, metrics, deterministic =
+config<span class=3D"Apple-tab-span" style=3D"white-space:pre">	=
+</span>Python, LangChain<span class=3D"Apple-tab-span" =
+style=3D"white-space:pre">	</span>=E2=80=94<span =
+class=3D"Apple-tab-span" style=3D"white-space:pre">	</span>Reliable =
+agent code</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica =
+Neue'">=F0=9F=A7=A9</font><font face=3D"Apple Color Emoji" size=3D"3" =
+style=3D"font: 12.0px 'Apple Color Emoji'"> </font><font =
+face=3D"Helvetica" size=3D"3" style=3D"font: 12.0px =
+Helvetica">Project<span class=3D"Apple-tab-span" =
+style=3D"white-space:pre">	</span>Project: =E2=80=9CAgent =
+Evaluation Dashboard=E2=80=9D<span class=3D"Apple-tab-span" =
+style=3D"white-space:pre">	</span>LangChain, Streamlit<span =
+class=3D"Apple-tab-span" style=3D"white-space:pre">	</span>Eval =
+Dashboard<span class=3D"Apple-tab-span" style=3D"white-space:pre">	=
+</span>Visual safety metrics</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'">=F0=9F=93=98 =
+<b>Resources:</b><b></b></font></p>
+<ul style=3D"list-style-type: disc">
+<li style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'">LangChain =
+Evaluation Toolkit</font></li>
+<li style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'"><a =
+href=3D"https://platform.openai.com/docs/guides/safety-best-practices">Ope=
+nAI Safety Guidelines</a></font></li>
+</ul>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'">=F0=9F=95=92 =
+<b>Weekly Total:</b> 84 hrs (2 weeks)<br>
+=E2=9C=85 <b>Skill Outcome:</b> Trustworthy, evaluable AI =
+agents.</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px 'Helvetica =
+Neue'; min-height: 15.0px"><br></p>
+<p style=3D"margin: 0.0px 0.0px 2.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"5" style=3D"font: 16.0px 'Helvetica Neue'">=F0=9F=92=BC<b> =
+Phase 7 =E2=80=93 Portfolio &amp; Monetization (Week =
+14=E2=80=9316)</b></font></p>
+<p style=3D"margin: 0.0px 0.0px 2.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"5" style=3D"font: 16.0px 'Helvetica Neue'">=F0=9F=8E=AF<b> =
+Goal: Showcase skills, deploy projects &amp; start =
+earning.</b></font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica" =
+size=3D"3" style=3D"font: 12.0px Helvetica">Focus<span =
+class=3D"Apple-tab-span" style=3D"white-space:pre">	=
+</span>Topics<span class=3D"Apple-tab-span" style=3D"white-space:pre">	=
+</span>Tools<span class=3D"Apple-tab-span" style=3D"white-space:pre">	=
+</span>Projects<span class=3D"Apple-tab-span" style=3D"white-space:pre">	=
+</span>Outcome</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica =
+Neue'">=F0=9F=A7=A0</font><font face=3D"Apple Color Emoji" size=3D"3" =
+style=3D"font: 12.0px 'Apple Color Emoji'"> </font><font =
+face=3D"Helvetica" size=3D"3" style=3D"font: 12.0px =
+Helvetica">Theory<span class=3D"Apple-tab-span" style=3D"white-space:pre">=
+	</span>=E2=80=A2 Freelancing strategy (Upwork, =
+Fiverr)</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica" =
+size=3D"3" style=3D"font: 12.0px Helvetica">=E2=80=A2 Productized =
+micro-SaaS ideas</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica" =
+size=3D"3" style=3D"font: 12.0px Helvetica">=E2=80=A2 Client onboarding =
+&amp; pricing<span class=3D"Apple-tab-span" style=3D"white-space:pre">	=
+</span>=E2=80=94<span class=3D"Apple-tab-span" style=3D"white-space:pre">	=
+</span>=E2=80=94<span class=3D"Apple-tab-span" style=3D"white-space:pre">	=
+</span>Business mindset</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica =
+Neue'">=E2=9A=99=EF=B8=8F</font><font face=3D"Apple Color Emoji" =
+size=3D"3" style=3D"font: 12.0px 'Apple Color Emoji'"> </font><font =
+face=3D"Helvetica" size=3D"3" style=3D"font: 12.0px =
+Helvetica">Tools<span class=3D"Apple-tab-span" style=3D"white-space:pre">	=
+</span>=E2=80=A2 GitHub portfolio setup</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica" =
+size=3D"3" style=3D"font: 12.0px Helvetica">=E2=80=A2 Notion/Website =
+portfolio</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica" =
+size=3D"3" style=3D"font: 12.0px Helvetica">=E2=80=A2 CI/CD basics =
+(Render, Vercel)<span class=3D"Apple-tab-span" style=3D"white-space:pre">	=
+</span>GitHub, Streamlit, Vercel<span class=3D"Apple-tab-span" =
+style=3D"white-space:pre">	</span>=E2=80=94<span =
+class=3D"Apple-tab-span" style=3D"white-space:pre">	</span>Launch =
+ready</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica =
+Neue'">=F0=9F=92=BB</font><font face=3D"Apple Color Emoji" size=3D"3" =
+style=3D"font: 12.0px 'Apple Color Emoji'"> </font><font =
+face=3D"Helvetica" size=3D"3" style=3D"font: 12.0px =
+Helvetica">Coding<span class=3D"Apple-tab-span" style=3D"white-space:pre">=
+	</span>=E2=80=A2 Refactor old projects</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica" =
+size=3D"3" style=3D"font: 12.0px Helvetica">=E2=80=A2 Integrate UIs =
+(Streamlit/Gradio)<span class=3D"Apple-tab-span" =
+style=3D"white-space:pre">	</span>LangChain, Gradio<span =
+class=3D"Apple-tab-span" style=3D"white-space:pre">	</span>=E2=80=94<s=
+pan class=3D"Apple-tab-span" style=3D"white-space:pre">	=
+</span>User-facing demos</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica =
+Neue'">=F0=9F=A7=A9</font><font face=3D"Apple Color Emoji" size=3D"3" =
+style=3D"font: 12.0px 'Apple Color Emoji'"> </font><font =
+face=3D"Helvetica" size=3D"3" style=3D"font: 12.0px =
+Helvetica">Project<span class=3D"Apple-tab-span" =
+style=3D"white-space:pre">	</span>Capstone Launch: Your own AI =
+agent product or service<span class=3D"Apple-tab-span" =
+style=3D"white-space:pre">	</span>Streamlit, AutoGen<span =
+class=3D"Apple-tab-span" style=3D"white-space:pre">	</span>Personal =
+AI Product<span class=3D"Apple-tab-span" style=3D"white-space:pre">	=
+</span>Public release ready</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'">=F0=9F=92=A1 =
+<b>Capstone Project Ideas:</b><b></b></font></p>
+<ol style=3D"list-style-type: decimal">
+<li style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'">=F0=9F=A7=A0 =
+<i>Multi-Agent Research Lab</i> =E2=80=93 autonomous team that reads =
+papers &amp; writes reports.</font></li>
+<li style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'">=F0=9F=A7=BE =
+<i>Smart Resume Builder Agent</i> =E2=80=93 personal branding &amp; =
+resume optimizer.</font></li>
+<li style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'">=F0=9F=8E=A5 =
+<i>YouTube Script &amp; Research Agent</i> =E2=80=93 finds topics, =
+summarizes sources, writes scripts.</font></li>
+</ol>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'">=F0=9F=95=92 =
+<b>Weekly Total:</b> 126 hrs (3 weeks)<br>
+=E2=9C=85 <b>Skill Outcome:</b> Deployed, monetizable AI agent =
+portfolio.</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px 'Helvetica =
+Neue'; min-height: 15.0px"><br></p>
+<p style=3D"margin: 0.0px 0.0px 2.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"5" style=3D"font: 16.0px 'Helvetica Neue'">=F0=9F=93=A6<b> =
+Final Output Checklist</b></font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"4" style=3D"font: 13.0px 'Helvetica Neue'">=E2=9C=85 5=E2=80=
+=937 Completed Agent Projects<br>
+=E2=9C=85 GitHub Portfolio + Docs<br>
+=E2=9C=85 Proficiency in: LangChain, AutoGen, FAISS/Chroma, Reflexion, =
+RAG<br>
+=E2=9C=85 Knowledge of: Planning, Memory, Safety, Evaluation<br>
+=E2=9C=85 Freelance/Internship-Ready</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px 'Helvetica =
+Neue'; min-height: 15.0px"><br></p>
+<p style=3D"margin: 0.0px 0.0px 2.0px 0.0px"><font face=3D"Helvetica =
+Neue" size=3D"5" style=3D"font: 16.0px 'Helvetica Neue'">=F0=9F=94=97<b> =
+Essential GitHub &amp; Resource Directory</b></font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica" =
+size=3D"3" style=3D"font: 12.0px Helvetica">Category<span =
+class=3D"Apple-tab-span" style=3D"white-space:pre">	=
+</span>Repository / Source<span class=3D"Apple-tab-span" =
+style=3D"white-space:pre">	</span>Purpose</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica" =
+size=3D"3" style=3D"font: 12.0px Helvetica">Core Framework<span =
+class=3D"Apple-tab-span" style=3D"white-space:pre">	</span><a =
+href=3D"https://github.com/langchain-ai/langchain?utm_source=3Dchatgpt.com=
+">langchain-ai/langchain</a><span class=3D"Apple-tab-span" =
+style=3D"white-space:pre">	</span>Foundation for agent =
+creation</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica" =
+size=3D"3" style=3D"font: 12.0px Helvetica">Minimal Agents<span =
+class=3D"Apple-tab-span" style=3D"white-space:pre">	</span><a =
+href=3D"https://github.com/yoheinakajima/babyagi?utm_source=3Dchatgpt.com"=
+>yoheinakajima/babyagi</a><span class=3D"Apple-tab-span" =
+style=3D"white-space:pre">	</span>Learn agent loops</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica" =
+size=3D"3" style=3D"font: 12.0px Helvetica">Autonomous Demo<span =
+class=3D"Apple-tab-span" style=3D"white-space:pre">	</span><a =
+href=3D"https://github.com/Significant-Gravitas/AutoGPT?utm_source=3Dchatg=
+pt.com">Significant-Gravitas/AutoGPT</a><span class=3D"Apple-tab-span" =
+style=3D"white-space:pre">	</span>Observe full =
+automation</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica" =
+size=3D"3" style=3D"font: 12.0px Helvetica">Multi-Agent<span =
+class=3D"Apple-tab-span" style=3D"white-space:pre">	</span><a =
+href=3D"https://github.com/microsoft/autogen?utm_source=3Dchatgpt.com">mic=
+rosoft/autogen</a><span class=3D"Apple-tab-span" =
+style=3D"white-space:pre">	</span>Team-based agents</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica" =
+size=3D"3" style=3D"font: 12.0px Helvetica">Open Fork<span =
+class=3D"Apple-tab-span" style=3D"white-space:pre">	</span><a =
+href=3D"https://github.com/ag2ai/ag2?utm_source=3Dchatgpt.com">ag2ai/ag2</=
+a><span class=3D"Apple-tab-span" style=3D"white-space:pre">	=
+</span>Community multi-agent system</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica" =
+size=3D"3" style=3D"font: 12.0px Helvetica">Design Patterns<span =
+class=3D"Apple-tab-span" style=3D"white-space:pre">	</span><a =
+href=3D"https://github.com/martomor/autogen-agentic-design?utm_source=3Dch=
+atgpt.com">martomor/autogen-agentic-design</a><span =
+class=3D"Apple-tab-span" style=3D"white-space:pre">	=
+</span>Architectural templates</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica" =
+size=3D"3" style=3D"font: 12.0px Helvetica">Memory<span =
+class=3D"Apple-tab-span" style=3D"white-space:pre">	</span><a =
+href=3D"https://github.com/chroma-core/chroma">chroma-core/chroma</a><span=
+ class=3D"Apple-tab-span" style=3D"white-space:pre">	</span>Vector =
+database</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica" =
+size=3D"3" style=3D"font: 12.0px Helvetica">Evaluations<span =
+class=3D"Apple-tab-span" style=3D"white-space:pre">	</span><a =
+href=3D"https://github.com/langchain-ai/langchain?utm_source=3Dchatgpt.com=
+">langchain-ai/eval</a><span class=3D"Apple-tab-span" =
+style=3D"white-space:pre">	</span>Test and validate =
+agents</font></p>
+<p style=3D"margin: 0.0px 0.0px 0.0px 0.0px"><font face=3D"Helvetica" =
+size=3D"3" style=3D"font: 12.0px Helvetica">Awesome Agents<span =
+class=3D"Apple-tab-span" style=3D"white-space:pre">	</span><a =
+href=3D"https://github.com/e2b-dev/awesome-ai-agents?utm_source=3Dchatgpt.=
+com">e2b-dev/awesome-ai-agents</a><span class=3D"Apple-tab-span" =
+style=3D"white-space:pre">	</span>Curated learning repo</font></p>
+</div></body></html>=
+
+--Apple-Mail=_2CB6B795-EBCD-4001-9482-BC07A8DA3B2E--

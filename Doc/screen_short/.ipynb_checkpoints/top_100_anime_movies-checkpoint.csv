@@ -1,0 +1,22 @@
+id,title,rating,release_at
+1,Hunter x Hunter,10.0,
+2,Fullmetal Alchemist,10.0,2010.0
+3,,10.0,
+4,Attack on Titan,9.9,
+5,Death Note,9.9,1993.0
+6,Demon Slayer,9.9,1990.0
+7,Mob Psycho 100,9.9,2000.0
+8,Sword Art Online,9.8,2017.0
+9,Fairy Tail,9.8,1992.0
+10,Neon Genesis Evangelion,9.8,2019.0
+11,My Hero Academia,9.6,2010.0
+12,Tokyo Ghoul,9.6,2019.0
+13,Jujutsu Kaisen,9.5,2015.0
+14,Black Clover,9.4,1995.0
+15,One Piece,9.4,1995.0
+16,Bleach,9.4,1995.0
+17,Haikyuu!!,9.4,2022.0
+18,Spirited Away,8.7,2012.0
+19,Re:Zero,8.3,2020.0
+20,Naruto,8.1,1990.0
+21,Dragon Ball Z,7.0,1992.0

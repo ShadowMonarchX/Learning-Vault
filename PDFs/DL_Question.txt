@@ -1,0 +1,238 @@
+
+
+
+
+What is the role of the input layer in a neural network?
+
+What is the function of hidden layers?
+
+Why do we use activation functions in hidden layers?
+
+What does the output layer produce in a classification task?
+
+How many neurons are needed in the input layer if your data has 10 features?
+
+Why can’t a model without hidden layers solve non-linear problems?
+
+Which activation functions are commonly used in output layers for:
+
+Binary classification?
+
+Multi-class classification?
+
+What happens if we remove activation functions from a neural network?
+
+Design a simple MLP for input data with 3 features and output of 2 classes.
+
+Explain how the number of hidden neurons affects model learning.
+
+How would you change the output layer for a regression task?
+
+Compare the use of ReLU vs Tanh in hidden layers.
+
+
+
+
+
+
+
+
+What is the range of values for the Sigmoid activation function?
+
+Why is the Tanh function considered better than Sigmoid in hidden layers?
+
+What is the mathematical formula of the ReLU function?
+
+Which activation function is commonly used in binary classification tasks?
+
+What is the primary role of Softmax in a neural network?
+
+Compare the gradient behavior of ReLU and Sigmoid.
+
+Explain the dying ReLU problem and how Leaky ReLU helps solve it.
+
+When should you prefer Softmax over Sigmoid?
+
+What is the difference between Leaky ReLU and Parametric ReLU?
+
+Why does Tanh have better performance in some deep networks than Sigmoid?
+
+Write PyTorch code to replace ReLU with LeakyReLU in a hidden layer.
+
+Explain how Softmax + CrossEntropyLoss work together in multi-class classification.
+
+If a neuron outputs only zeros after training, what might be the cause?
+
+How would you visualize and compare the outputs of different activation functions?
+
+Can activation functions cause overfitting? Why or why not?
+
+
+
+
+
+What is forward propagation in a neural network?
+
+What does a neuron compute before applying the activation function?
+
+Why do we use activation functions in forward propagation?
+
+What is the mathematical formula for a neuron's output in forward pass?
+
+Explain the role of the weight matrix and bias vector in a layer.
+
+What happens if we remove activation functions from the hidden layers?
+
+Write PyTorch code to print the intermediate outputs of all layers during forward pass.
+
+In forward propagation, what would happen if all weights are initialized to zero?
+
+Why do we apply sigmoid in the output layer for binary classification?
+
+Explain the effect of input normalization on forward propagation.
+
+
+
+
+
+
+
+What is a loss function and why is it important?
+
+Which loss function is typically used in regression problems?
+
+What is the output range of MSE?
+
+Why do we use Cross-Entropy Loss for classification tasks?
+
+Compare MSE and Cross-Entropy Loss in terms of use cases.
+
+What is the main drawback of MSE when used for classification?
+
+How does Hinge Loss enforce a margin?
+
+What does PyTorch’s CrossEntropyLoss function include internally?
+
+Write code to calculate Hinge Loss using PyTorch manually.
+
+How do different loss functions affect the gradients and training?
+
+Why is it necessary to apply sigmoid before BCE loss?
+
+Modify a PyTorch model to switch from MSELoss to CrossEntropyLoss.
+
+
+
+
+
+
+
+
+What is the goal of backpropagation?
+
+What role does the chain rule play in backpropagation?
+
+What are gradients, and why are they important?
+
+What is the difference between forward and backward pass?
+
+Derive the gradient of MSE loss with respect to the weight in a simple linear neuron.
+
+Explain how gradients flow backward in a computational graph.
+
+Why do we use optimizer.zero_grad() in PyTorch?
+
+What happens if we don’t update weights during training?
+
+Manually compute forward and backward pass for a 2-layer network with sigmoid activations.
+
+Explain the vanishing gradient problem and how it affects backpropagation.
+
+How do automatic differentiation tools (like PyTorch’s autograd) compute gradients?
+
+Write a custom training loop using .backward() and .step() for a neural network.
+
+
+
+
+
+
+What is the main difference between Batch and Stochastic Gradient Descent?
+
+Why is Mini-Batch Gradient Descent considered a compromise?
+
+What is one advantage of using Stochastic Gradient Descent on large datasets?
+
+In what situation is Batch Gradient Descent impractical?
+
+Describe the typical batch sizes used in Mini-Batch GD.
+
+Explain why Mini-Batch GD is well-suited for GPU training.
+
+Write PyTorch code to train a model using Mini-Batch Gradient Descent.
+
+How does the batch size affect model convergence and training speed?
+
+How does shuffling the dataset in mini-batch training affect learning?
+
+Compare convergence behavior of SGD vs. Batch GD on non-convex loss functions.
+
+
+
+
+
+
+
+What problem does Momentum solve in SGD?
+
+How does Adam combine ideas from RMSProp and Momentum?
+
+Why can AdaGrad slow down training over time?
+
+Compare SGD, RMSProp, and Adam for deep neural networks.
+
+Write PyTorch code to switch between optimizers during training.
+
+Why does NAG often perform better than classical Momentum?
+
+What is the purpose of L2 regularization?
+
+How does Dropout prevent overfitting?
+
+What does Early Stopping do during training?
+
+Compare L1 and L2 regularization in terms of their effect on model weights.
+
+Implement dropout in a PyTorch MLP model and show its effect.
+
+Design early stopping logic in PyTorch to monitor validation loss.
+
+
+
+
+
+What does the learning rate control?
+
+How does batch size affect training stability?
+
+What are epochs in training?
+
+Explain the difference between grid search and random search.
+
+Why is Bayesian optimization more efficient?
+
+What is the vanishing gradient problem?
+
+How does ReLU help with gradient issues?
+
+Name 2 methods to fix exploding gradients.
+
+When should you use Xavier vs He initialization?
+
+How does poor initialization affect learning?
+
+What are the benefits of batch normalization?
+
+Where in the layer stack is batch norm typically used?
+
+How does batch norm reduce dependence on initialization?
