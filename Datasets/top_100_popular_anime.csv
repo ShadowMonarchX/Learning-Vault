@@ -1,0 +1,101 @@
+id,title,rating,release_at
+1,Hunter x Hunter,10.0,
+2,Fullmetal Alchemist,10.0,2010.0
+3,,10.0,
+4,Attack on Titan,9.9,
+5,Death Note,9.9,1993.0
+6,Demon Slayer,9.9,1990.0
+7,Mob Psycho 100,9.9,2000.0
+8,,9.9,2012.0
+9,Sword Art Online,9.8,2017.0
+10,Fairy Tail,9.8,1992.0
+11,Neon Genesis Evangelion,9.8,2019.0
+12,,9.7,1991.0
+13,My Hero Academia,9.6,2010.0
+14,Tokyo Ghoul,9.6,2019.0
+15,Jujutsu Kaisen,9.5,2015.0
+16,Jujutsu Kaisen,9.5,2010.0
+17,Hunter x Hunter,9.5,2013.0
+18,Black Clover,9.4,1995.0
+19,One Piece,9.4,1995.0
+20,Bleach,9.4,1995.0
+21,Sword Art Online,9.4,1997.0
+22,Tokyo Ghoul,9.4,2002.0
+23,Haikyuu!!,9.4,2022.0
+24,Haikyuu!!,9.2,2022.0
+25,Death Note,9.1,2006.0
+26,Sword Art Online,9.1,2007.0
+27,Mob Psycho 100,9.0,
+28,Death Note,9.0,
+29,Demon Slayer,8.9,1994.0
+30,,8.9,2021.0
+31,Attack on Titan,8.8,1999.0
+32,Attack on Titan,8.8,1993.0
+33,Fullmetal Alchemist,8.8,1998.0
+34,Fullmetal Alchemist,8.7,1994.0
+35,,8.7,2007.0
+36,Spirited Away,8.7,2012.0
+37,,8.6,
+38,Attack on Titan,8.5,2015.0
+39,Spirited Away,8.4,
+40,Fullmetal Alchemist,8.3,2018.0
+41,Fairy Tail,8.3,2000.0
+42,Re:Zero,8.3,2020.0
+43,,8.2,2014.0
+44,Sword Art Online,8.2,2020.0
+45,One Piece,8.2,1991.0
+46,Spirited Away,8.2,2010.0
+47,Naruto,8.1,1990.0
+48,Black Clover,8.1,2002.0
+49,Sword Art Online,8.0,1991.0
+50,Demon Slayer,8.0,1997.0
+51,,7.9,2008.0
+52,Black Clover,7.9,2009.0
+53,Re:Zero,7.9,1994.0
+54,Neon Genesis Evangelion,7.8,2006.0
+55,My Hero Academia,7.7,2021.0
+56,Attack on Titan,7.7,
+57,Sword Art Online,7.6,1994.0
+58,One Piece,7.6,1990.0
+59,Demon Slayer,7.5,1994.0
+60,Mob Psycho 100,7.5,2013.0
+61,Fairy Tail,7.5,1993.0
+62,,7.4,2009.0
+63,Fullmetal Alchemist,7.4,2005.0
+64,Spirited Away,7.4,2006.0
+65,Hunter x Hunter,7.3,2006.0
+66,,7.3,2005.0
+67,Attack on Titan,7.2,1999.0
+68,Re:Zero,7.2,2017.0
+69,Tokyo Ghoul,7.2,2006.0
+70,Fullmetal Alchemist,7.2,2000.0
+71,Jujutsu Kaisen,7.2,1992.0
+72,Neon Genesis Evangelion,7.1,2022.0
+73,Bleach,7.1,2006.0
+74,Neon Genesis Evangelion,7.1,2011.0
+75,Death Note,7.1,1999.0
+76,Tokyo Ghoul,7.0,2007.0
+77,Dragon Ball Z,7.0,1992.0
+78,Death Note,7.0,2020.0
+79,Neon Genesis Evangelion,6.9,2003.0
+80,Tokyo Ghoul,6.9,2019.0
+81,My Hero Academia,6.8,2000.0
+82,Sword Art Online,6.8,2014.0
+83,Sword Art Online,6.8,1999.0
+84,Neon Genesis Evangelion,6.8,2014.0
+85,One Piece,6.7,2002.0
+86,Tokyo Ghoul,6.5,
+87,Bleach,6.4,2002.0
+88,Naruto,6.3,2002.0
+89,Naruto,6.3,1999.0
+90,Jujutsu Kaisen,6.2,2019.0
+91,Fullmetal Alchemist,,2018.0
+92,Dragon Ball Z,,1994.0
+93,Black Clover,,2016.0
+94,Fullmetal Alchemist,,2017.0
+95,Tokyo Ghoul,,
+96,Sword Art Online,,1998.0
+97,Neon Genesis Evangelion,,1990.0
+98,Fairy Tail,,2004.0
+99,Re:Zero,,2016.0
+100,Naruto,,1994.0

@@ -1,0 +1,359 @@
+Here are some **interview questions** (with brief explanations) based on your project:
+
+---
+
+## 🔐 **Project: Full-Stack Authentication System using Django and React**
+
+### ✅ **General Questions**
+
+1. **What is JWT and how does it work in your authentication system?**
+
+   * Explain how JWT is generated after login, sent to the frontend, stored (e.g. localStorage), and used to authorize future API requests.
+
+2. **Why did you choose Django REST Framework (DRF) for the backend?**
+
+   * Mention benefits like built-in support for token-based auth, serialization, viewsets, etc.
+
+3. **How do you handle secure storage of the JWT token on the client side?**
+
+   * Talk about using `localStorage`, `sessionStorage`, or `HttpOnly cookies`, and discuss pros/cons (e.g. XSS risks).
+
+4. **How do you protect API endpoints using JWT in Django?**
+
+   * Explain how you added `IsAuthenticated` or custom permission classes and how tokens are checked in request headers.
+
+---
+
+### ✅ **Frontend (React) Questions**
+
+5. **How does React communicate with the Django backend in your project?**
+
+   * Through Axios or Fetch API to send HTTP requests, with JWT in headers for protected routes.
+
+6. **How do you manage authentication state in React?**
+
+   * Talk about storing the JWT in state/localStorage, using `useContext` or a state manager like Redux for auth state.
+
+7. **What happens when a user logs out?**
+
+   * Explain how the JWT token is removed from storage and the frontend is redirected or state reset.
+
+---
+
+### ✅ **Backend (Django/DRF) Questions**
+
+8. **How did you implement user registration and login in Django?**
+
+   * Talk about using `APIView` or `ViewSet`, `UserSerializer`, and generating JWT upon successful login.
+
+9. **How do you handle token expiration and refresh?**
+
+   * If using `djangorestframework-simplejwt`, explain how refresh tokens work and how tokens are renewed.
+
+10. **What middleware or packages did you use for authentication?**
+
+* Mention `SimpleJWT`, `djangorestframework`, CORS headers, etc.
+
+---
+
+### ✅ **Security & Best Practices**
+
+11. **How do you prevent unauthorized access to frontend routes?**
+
+* Discuss route protection using conditional rendering or private routes in React.
+
+12. **What security measures did you implement to protect user data?**
+
+* Mention password hashing, HTTPS, CORS settings, XSS/CSRF protection (if applicable).
+
+13. **Did you face any CORS issues? How did you fix them?**
+
+* Explain how Django CORS headers were set up (`django-cors-headers`) to allow frontend communication.
+
+---
+
+### ✅ Bonus/Advanced
+
+14. **What would you improve in your current authentication system?**
+
+* Suggest using refresh tokens securely, adding email verification, 2FA, or switching to OAuth.
+
+15. **How would you scale this system in production?**
+
+* Add secure token storage (cookies), rate limiting, use NGINX/Load Balancer, environment variables, etc.
+
+---
+
+Would you like **answers** for these as well in interview style? Or a **PDF summary** for your prep?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Here are key **interview questions (with context)** based on your project:
+
+---
+
+## 🏠 **Project: Bangalore Home Price Prediction (End-to-End ML Project)**
+
+### ✅ **General Questions**
+
+1. **What was the objective of this project?**
+
+   * Explain: Predict house prices in Bangalore using ML based on features like location, size, and square footage.
+
+2. **What dataset did you use and how did you collect it?**
+
+   * Talk about the CSV dataset (from Kaggle or similar), its structure, and how you loaded it using Pandas.
+
+---
+
+### ✅ **Data Preprocessing & Feature Engineering**
+
+3. **What steps did you take during data cleaning?**
+
+   * Removing missing values, handling categorical variables (like location), removing outliers (like unrealistic sqft per room), etc.
+
+4. **How did you handle outliers?**
+
+   * You might mention removing data points where price per square foot was far from the mean or filtering based on bedroom-to-bathroom ratios.
+
+5. **How did you convert categorical features like location into numerical format?**
+
+   * Using one-hot encoding (with `pd.get_dummies()`), and handling high cardinality by grouping rare locations into “other”.
+
+---
+
+### ✅ **Model Building**
+
+6. **Which machine learning algorithm did you use and why?**
+
+   * Linear Regression – simple, interpretable, good for numeric prediction.
+
+7. **How did you evaluate the model’s performance?**
+
+   * Using metrics like RMSE, R² score, train/test split for validation.
+
+8. **Did you try any other models?**
+
+   * If yes, mention decision trees or random forest. If no, explain why Linear Regression was sufficient.
+
+---
+
+### ✅ **Model Deployment & Integration**
+
+9. **How did you integrate the ML model with the frontend?**
+
+   * Using **Flask** as a backend API, exposing a `/predict` route that takes input and returns the predicted price.
+
+10. **What technology did you use for the frontend?**
+
+* Simple HTML/CSS form for inputs like location, area, bedrooms, and a submit button to get predictions from Flask.
+
+11. **How does the user interact with your app?**
+
+* Describe: User fills the form → clicks submit → Flask API gets the input → model predicts → result shown.
+
+---
+
+### ✅ **Code & Architecture**
+
+12. **How is your project structured (folders/files)?**
+
+* E.g. `app.py` for Flask, `model.pkl` for saved model, `utils.py` for preprocessing, `templates/` for HTML, etc.
+
+13. **How did you save and load your trained model?**
+
+* Used `pickle` or `joblib` to serialize the trained model and load it in Flask during prediction.
+
+---
+
+### ✅ **Advanced / Optional**
+
+14. **How would you improve this project if given more time?**
+
+* Add a better frontend (React), use more advanced models (XGBoost), deploy with Docker or on cloud, include more features like nearby amenities.
+
+15. **How would you deploy this project to production?**
+
+* Use cloud platforms (like AWS, Heroku), add Docker container, use Gunicorn + NGINX for serving Flask, secure inputs.
+
+---
+
+### ✅ Want Answers in Interview Style?
+
+Let me know if you want the **answers formatted like a mock interview**, or a **one-page prep sheet PDF**.
+
+
+
+
+
+
+
+
+
+
+
+Here's a **Computer Networks syllabus/roadmap tailored for Software Developers or SDE Intern roles**, focusing on what companies expect from candidates during interviews and real-world development.
+
+---
+
+## 🚀 Computer Networks Roadmap for Software Developers / SDE Interns
+
+### 🎯 Goal:
+
+To gain **practical understanding** of computer networks relevant to:
+
+* System design interviews
+* Backend/server-side development
+* API design, scaling, and debugging
+* Network-level security
+
+---
+
+## 🧩 1. Basics of Networking (Foundations)
+
+> 🔹 Objective: Understand how devices communicate over the internet.
+
+* What is a network? LAN, WAN, Internet
+* OSI Model (7 Layers) vs TCP/IP Model
+* IP Addressing (IPv4/IPv6), Subnetting
+* MAC address vs IP address
+* DNS, DHCP, NAT
+* Switches, Routers, Hubs, Gateways
+
+### ✅ Resources:
+
+* [Computer Networking Basics - freeCodeCamp (YouTube)](https://www.youtube.com/watch?v=qiQR5rTSshw)
+* Book: “Computer Networking: A Top-Down Approach” (Chapters 1–2)
+
+---
+
+## 🌐 2. HTTP, HTTPS, and Web Protocols
+
+> 🔹 Objective: Understand how browsers and APIs communicate.
+
+* HTTP vs HTTPS
+* Request/Response cycle
+* Methods: GET, POST, PUT, DELETE
+* Status Codes (200, 404, 500, etc.)
+* Headers, Cookies, Sessions, JWTs
+* SSL/TLS Basics
+* REST vs GraphQL basics
+
+### ✅ Tools to Try:
+
+* Postman, curl, browser DevTools (Network tab)
+
+---
+
+## 📦 3. TCP/IP and Transport Layer
+
+> 🔹 Objective: Know how reliable data transfer works.
+
+* TCP vs UDP
+* 3-way handshake (SYN, SYN-ACK, ACK)
+* Ports and Sockets
+* Congestion Control, Flow Control
+* Packet Loss, Retransmission
+
+### ✅ Practice:
+
+* Use `telnet`, `netstat`, `nc`, and Wireshark
+* Simulate TCP using animations: [https://www.lucidchart.com/pages/tcp-3-way-handshake](https://www.lucidchart.com/pages/tcp-3-way-handshake)
+
+---
+
+## 🛡 4. Network Security (Essentials for SDEs)
+
+> 🔹 Objective: Build secure applications.
+
+* HTTPS and TLS Certificates
+* Cross-Origin Resource Sharing (CORS)
+* CSRF and XSS (how browsers defend)
+* Firewalls, VPNs, Proxies
+
+### ✅ Read:
+
+* OWASP Top 10 for Web Security
+
+---
+
+## ⚙️ 5. DNS, CDN, and Load Balancing
+
+> 🔹 Objective: Understand global scalability.
+
+* DNS Resolution (A, CNAME, MX records)
+* CDNs (Cloudflare, Akamai): Why we use them
+* Load Balancers (Round Robin, Least Connections)
+* Reverse Proxies (Nginx, HAProxy)
+
+---
+
+## ⚡️ 6. Tools for Debugging & Monitoring
+
+> 🔹 Objective: Debug real-world network issues.
+
+* `ping`, `traceroute`, `nslookup`, `dig`
+* cURL & HTTPie for testing endpoints
+* Monitoring Tools: Wireshark, tcpdump
+
+---
+
+## 🧠 7. Bonus: System Design Relevance
+
+> Useful in interviews and backend architecture.
+
+* Stateless vs Stateful communication
+* WebSockets vs Long Polling
+* Rate Limiting, Throttling
+* API Gateways
+* Microservices Communication (REST, gRPC, Kafka)
+
+---
+
+## 📚 Suggested Learning Path (8 Weeks)
+
+| Week | Topics                         |
+| ---- | ------------------------------ |
+| 1    | OSI Model, Networking Basics   |
+| 2    | IP, DNS, NAT, Subnetting       |
+| 3    | HTTP/HTTPS, Web Communication  |
+| 4    | TCP/IP Deep Dive               |
+| 5    | TLS, SSL, Cookies, JWT         |
+| 6    | DNS/CDN/Load Balancers         |
+| 7    | Network Security for Web Apps  |
+| 8    | System Design + Interview Prep |
+
+---
+
+## 🛠 Projects to Solidify Concepts
+
+* Build a REST API with Flask/Django + Postman
+* Use Wireshark to capture your browser's HTTP traffic
+* Simulate a DNS resolution using `dig`
+* Deploy a website with a CDN (e.g., Netlify + Cloudflare)
+* Setup Nginx as a reverse proxy
+
+---
+
+## 📌 Final Tips
+
+* For **SDE interviews**, focus on: HTTP, REST, TCP/UDP, IP, DNS, Load Balancing, Security basics.
+* Practice **network-based system design** questions (e.g., design WhatsApp, Netflix).
+* Use online labs like [Cisco Packet Tracer](https://www.netacad.com/courses/packet-tracer) or \[NAT Networking Simulators].
+
+---
+
+If you'd like, I can generate a PDF/Notion doc version or create a **GitHub roadmap** version for easy tracking. Would you like that?
+
+

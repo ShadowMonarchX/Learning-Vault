@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xfdf xmlns="http://ns.adobe.com/xfdf/" xml:space="preserve">
+<fields><field name="name_field">
+<value>tet sds</value>
+</field>
+<field name="email_field">
+<value>test@gmail.com</value>
+</field>
+<field name="phone_field">
+<value>12312312</value>
+</field>
+<field name="enquiry_field">
+<value>ddsds</value>
+</field>
+</fields>
+</xfdf>
